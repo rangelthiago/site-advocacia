@@ -95,18 +95,12 @@
     <header class="fixed top-0 left-0 w-full z-40 glass-header border-b border-brand-border/40 transition-all duration-300" id="main-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo Oficial Apontando para logo.png -->
-            <a href="#" class="flex items-center space-x-3 group">
-                <img src="logo.png" alt="Thiago Rangel Advocacia & Consultoria" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('logo-header-fallback').classList.remove('hidden'); document.getElementById('logo-header-fallback').classList.add('flex');">
-                
-                <!-- Fallback inteligente para pré-visualização quando o arquivo local ainda não estiver carregado -->
-                <div id="logo-header-fallback" class="hidden items-center space-x-3">
-                    <span class="text-3xl sm:text-4xl font-serif font-bold text-brand-gold tracking-tighter">TR</span>
-                    <div class="border-l border-brand-gold/30 pl-3">
-                        <div class="text-xs sm:text-sm font-serif tracking-widest text-brand-ivory font-bold">THIAGO RANGEL</div>
-                        <div class="text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] text-brand-gold uppercase">Advocacia & Consultoria</div>
-                    </div>
-                </div>
+            <!-- Logo Oficial Apontando para logo.png (com fallback inteligente para .png.png) -->
+            <a href="#" class="flex items-center group">
+                <img src="logo.png" 
+                     alt="Thiago Rangel Advocacia & Consultoria" 
+                     class="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-transform group-hover:scale-105"
+                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='logo.png.png';}">
             </a>
 
             <!-- Menu Desktop -->
@@ -159,7 +153,7 @@
                 <span>Advocacia de Alta Performance • Sede em Umuarama-PR</span>
             </div>
 
-            <!-- Título Principal Exato -->
+            <!-- Título Principal -->
             <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-ivory max-w-4xl mx-auto leading-tight sm:leading-tight mb-6">
                 Soluções Jurídicas Estratégicas para <span class="gold-gradient-text">Você</span>
             </h1>
@@ -181,7 +175,7 @@
                 </a>
             </div>
 
-            <!-- Badges de Autoridade (Sem menção a 100% atendimento por sócio ou provimento OAB) -->
+            <!-- Badges de Autoridade -->
             <div class="mt-16 pt-10 border-t border-brand-border/30 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
                 <div class="p-2">
                     <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Alta Precisão</div>
@@ -204,7 +198,7 @@
         </div>
     </section>
 
-    <!-- ================= 3. ÁREAS DE ATUAÇÃO (SISTEMA DE ABAS PJ vs PF) ================= -->
+    <!-- ================= 3. ÁREAS DE ATUAÇÃO ================= -->
     <section id="areas" class="py-24 bg-brand-black relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -274,7 +268,7 @@
                     </a>
                 </div>
 
-                <!-- Card 3: Direito da Saúde & Liminares (PF) - Padrão idêntico aos outros cards -->
+                <!-- Card 3: Direito da Saúde & Liminares (PF) -->
                 <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
@@ -294,7 +288,7 @@
                     </a>
                 </div>
 
-                <!-- Card 4: Direito Bancário e Fraudes (PF) - Sem menção a leilão irregular ou busca e apreensão -->
+                <!-- Card 4: Direito Bancário e Fraudes (PF) -->
                 <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
@@ -404,21 +398,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Coluna Visual / Cartão com Foto em Moldura Circular Dourada -->
+                <!-- Coluna Visual / Cartão com a Foto Oficial do Dr. Thiago Rangel -->
                 <div class="lg:col-span-5">
                     <div class="relative mx-auto max-w-sm lg:max-w-none">
                         <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-gold to-brand-goldDark rounded-2xl blur opacity-30"></div>
                         <div class="relative bg-brand-card p-8 rounded-2xl border border-brand-gold/40 shadow-2xl flex flex-col items-center text-center">
                             
-                            <!-- Círculo Central com Borda Dourada apontando para foto.jpg -->
-                            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full border-2 border-brand-gold p-1 mb-6 relative overflow-hidden shadow-2xl bg-brand-surface flex items-center justify-center">
-                                <img src="foto.jpg" alt="Dr. Thiago Rangel" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('foto-circle-fallback').classList.remove('hidden'); document.getElementById('foto-circle-fallback').classList.add('flex');">
-                                
-                                <!-- Fallback exibido se foto.jpg não for encontrada localmente no preview -->
-                                <div id="foto-circle-fallback" class="hidden flex-col items-center justify-center text-brand-gold">
-                                    <span class="text-4xl font-serif font-bold tracking-tight">TR</span>
-                                    <span class="text-[9px] tracking-widest uppercase text-brand-muted mt-1">Dr. Thiago</span>
-                                </div>
+                            <!-- Círculo Central com Borda Dourada com a Foto do Advogado -->
+                            <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-brand-gold p-1.5 mb-6 relative overflow-hidden shadow-2xl bg-brand-surface flex items-center justify-center">
+                                <img src="foto.jpg" 
+                                     alt="Dr. Thiago Rangel - Advogado Fundador" 
+                                     class="w-full h-full object-cover rounded-full"
+                                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='foto.jpg.jpg';}">
                             </div>
 
                             <h3 class="font-serif text-2xl font-bold text-brand-ivory mb-1">Dr. Thiago Rangel</h3>
@@ -510,7 +501,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- Diferencial 1: Estratégia e Alta Precisão -->
                 <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
                     <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">01</span>
                     <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
@@ -522,7 +512,6 @@
                     </p>
                 </div>
 
-                <!-- Diferencial 2: Velocidade e Prontidão -->
                 <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
                     <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">02</span>
                     <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
@@ -534,7 +523,6 @@
                     </p>
                 </div>
 
-                <!-- Diferencial 3: Mentalidade de Negócios -->
                 <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
                     <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">03</span>
                     <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
@@ -703,19 +691,13 @@
             
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-brand-border/30">
                 
-                <!-- Coluna 1: Logo apontando para logo.png -->
+                <!-- Coluna 1: Logo Oficial no Rodapé -->
                 <div class="md:col-span-5 space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <img src="logo.png" alt="Thiago Rangel Advocacia & Consultoria" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('logo-footer-fallback').classList.remove('hidden'); document.getElementById('logo-footer-fallback').classList.add('flex');">
-                        
-                        <!-- Fallback para o rodapé -->
-                        <div id="logo-footer-fallback" class="hidden items-center space-x-3">
-                            <span class="text-3xl font-serif font-bold text-brand-gold tracking-tighter">TR</span>
-                            <div class="border-l border-brand-gold/30 pl-3">
-                                <div class="text-sm font-serif tracking-widest text-brand-ivory font-bold">THIAGO RANGEL</div>
-                                <div class="text-[0.65rem] tracking-[0.2em] text-brand-gold uppercase">Advocacia & Consultoria</div>
-                            </div>
-                        </div>
+                    <div class="flex items-center">
+                        <img src="logo.png" 
+                             alt="Thiago Rangel Advocacia & Consultoria" 
+                             class="h-12 sm:h-14 w-auto max-w-[220px] sm:max-w-[260px] object-contain"
+                             onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='logo.png.png';}">
                     </div>
                     <p class="text-xs text-brand-muted leading-relaxed font-light max-w-sm mt-2">
                         Sociedade individual de advocacia sediada em Umuarama - PR. Prestação de serviços jurídicos estratégicos para empresas e pessoas físicas em todo o Brasil.
@@ -866,3 +848,4 @@
     </script>
 </body>
 </html>
+
