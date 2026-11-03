@@ -15,10 +15,10 @@
     <meta property="og:url" content="https://www.advogadothiagorangel.com.br/">
     <meta property="og:title" content="Thiago Rangel | Advocacia & Consultoria Estratégica">
     <meta property="og:description" content="Soluções jurídicas combativas e de alta precisão técnica em Umuarama-PR e em todo o Brasil.">
-    <meta property="og:image" content="https://www.advogadothiagorangel.com.br/foto rosto.webp">
+    <meta property="og:image" content="https://www.advogadothiagorangel.com.br/foto-rosto.webp">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.webp">
+    <link rel="icon" type="image/webp" href="favicon.webp">
     <link rel="apple-touch-icon" href="favicon.webp">
 
     <!-- Google Fonts com preconnect otimizado -->
@@ -42,7 +42,7 @@
                             goldDark: '#8F6F38',
                             ivory: '#F5F2EC',
                             titanium: '#5C5C5C',
-                            muted: '#B5B5B5', // Ajustado para contraste perfeito WCAG AA
+                            muted: '#CCCCCC', // Contraste estrito WCAG AA (>7:1 em fundo escuro)
                             border: 'rgba(185, 148, 88, 0.22)'
                         }
                     },
@@ -61,7 +61,7 @@
       "@context": "https://schema.org",
       "@type": "LegalService",
       "name": "Thiago Rangel Advocacia & Consultoria",
-      "image": "https://www.advogadothiagorangel.com.br/logo horizontal.webp",
+      "image": "https://www.advogadothiagorangel.com.br/logo-horizontal.webp",
       "url": "https://www.advogadothiagorangel.com.br",
       "telephone": "+5544984410950",
       "email": "thiagorangel.advogado@gmail.com",
@@ -102,7 +102,7 @@
         }
 
         .glass-header {
-            background: rgba(18, 18, 18, 0.92);
+            background: rgba(18, 18, 18, 0.94);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -126,7 +126,7 @@
 
     <!-- NOTIFICAÇÃO TOAST -->
     <div id="toast" class="fixed top-24 right-5 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-brand-card border border-brand-gold text-brand-ivory px-5 py-4 rounded-xl shadow-2xl flex items-center space-x-3 pointer-events-none" role="alert" aria-live="assertive">
-        <svg class="w-5 h-5 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <svg class="w-5 h-5 text-brand-goldLight shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         <div id="toast-message" class="text-sm font-medium">Redirecionando para o WhatsApp...</div>
     </div>
 
@@ -136,44 +136,45 @@
             
             <!-- Logo Oficial -->
             <a href="#inicio" class="flex items-center group" aria-label="Ir para o início">
-                <img src="logo horizontal.webp" 
+                <img src="logo-horizontal.webp" 
                      alt="Thiago Rangel Advocacia & Consultoria" 
                      width="240"
                      height="48"
+                     fetchpriority="high"
                      class="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-transform group-hover:scale-105">
             </a>
 
             <!-- Menu Desktop -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-ivory/80" aria-label="Navegação Principal">
-                <a href="#inicio" class="hover:text-brand-gold transition-colors py-1">Início</a>
-                <a href="#areas" class="hover:text-brand-gold transition-colors py-1">Áreas de Atuação</a>
-                <a href="#sobre" class="hover:text-brand-gold transition-colors py-1">O Escritório</a>
-                <a href="#diferenciais" class="hover:text-brand-gold transition-colors py-1">Diferenciais</a>
-                <a href="#contato" class="hover:text-brand-gold transition-colors py-1">Contato</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-ivory" aria-label="Navegação Principal">
+                <a href="#inicio" class="hover:text-brand-goldLight transition-colors py-1">Início</a>
+                <a href="#areas" class="hover:text-brand-goldLight transition-colors py-1">Áreas de Atuação</a>
+                <a href="#sobre" class="hover:text-brand-goldLight transition-colors py-1">O Escritório</a>
+                <a href="#diferenciais" class="hover:text-brand-goldLight transition-colors py-1">Diferenciais</a>
+                <a href="#contato" class="hover:text-brand-goldLight transition-colors py-1">Contato</a>
             </nav>
 
             <!-- Botão de Ação CTA Header -->
             <div class="hidden sm:flex items-center">
                 <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" 
-                   class="inline-flex items-center px-4 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all duration-300 shadow-sm">
+                   class="inline-flex items-center px-4 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider bg-transparent border border-brand-goldLight text-brand-goldLight hover:bg-brand-gold hover:text-brand-black transition-all duration-300 shadow-sm">
                     <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                     Atendimento Direto
                 </a>
             </div>
 
             <!-- Botão Mobile Menu Hamburger -->
-            <button id="mobile-menu-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" class="md:hidden text-brand-ivory hover:text-brand-gold focus:outline-none p-2">
+            <button id="mobile-menu-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" class="md:hidden text-brand-ivory hover:text-brand-goldLight focus:outline-none p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
 
         <!-- Menu Mobile Drawer -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-black/95 border-b border-brand-border px-4 pt-3 pb-6 space-y-3">
-            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Início</a>
-            <a href="#areas" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Áreas de Atuação</a>
-            <a href="#sobre" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">O Escritório</a>
-            <a href="#diferenciais" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Diferenciais</a>
-            <a href="#contato" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Contato & Localização</a>
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory hover:bg-brand-card hover:text-brand-goldLight">Início</a>
+            <a href="#areas" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory hover:bg-brand-card hover:text-brand-goldLight">Áreas de Atuação</a>
+            <a href="#sobre" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory hover:bg-brand-card hover:text-brand-goldLight">O Escritório</a>
+            <a href="#diferenciais" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory hover:bg-brand-card hover:text-brand-goldLight">Diferenciais</a>
+            <a href="#contato" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory hover:bg-brand-card hover:text-brand-goldLight">Contato & Localização</a>
             <div class="pt-2">
                 <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" 
                    class="w-full flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-colors">
@@ -184,7 +185,7 @@
         </div>
     </header>
 
-    <!-- INÍCIO DO CONTEÚDO PRINCIPAL (TAG MAIN OBRIGATÓRIA PARA ACESSIBILIDADE) -->
+    <!-- INÍCIO DO CONTEÚDO PRINCIPAL -->
     <main id="conteudo-principal">
 
         <!-- ================= 2. HERO SECTION ================= -->
@@ -193,11 +194,11 @@
                 
                 <!-- Badge Superior -->
                 <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-gold/40 text-[11px] sm:text-xs text-brand-goldLight tracking-wider uppercase mb-8 shadow-sm">
-                    <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-brand-goldLight animate-pulse"></span>
                     <span>Advocacia de Alta Performance • Sede em Umuarama-PR</span>
                 </div>
 
-                <!-- Título Principal com Palavras-Chave Estratégicas -->
+                <!-- Título Principal -->
                 <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-ivory max-w-4xl mx-auto leading-tight sm:leading-tight mb-6">
                     Soluções Jurídicas Estratégicas para <span class="gold-gradient-text">Você</span>
                 </h1>
@@ -213,9 +214,9 @@
                         <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                         Fale Conosco
                     </a>
-                    <a href="#areas" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold tracking-wider text-brand-ivory border border-brand-border bg-brand-card/60 hover:bg-brand-surface hover:border-brand-gold/50 transition-all duration-300 flex items-center justify-center">
+                    <a href="#areas" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold tracking-wider text-brand-ivory border border-brand-border bg-brand-card/60 hover:bg-brand-surface hover:border-brand-goldLight transition-all duration-300 flex items-center justify-center">
                         Conhecer Áreas
-                        <svg class="w-3.5 h-3.5 ml-2 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                        <svg class="w-3.5 h-3.5 ml-2 text-brand-goldLight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </a>
                 </div>
 
@@ -247,7 +248,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-14">
-                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Portfólio Jurídico</span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-goldLight font-semibold">Portfólio Jurídico</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
                         Atuação Estruturada e Focada no seu Objetivo
                     </h2>
@@ -260,11 +261,11 @@
                         <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-gold text-brand-black" data-filter="all">
                             Todas as Áreas
                         </button>
-                        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="empresas">
-                            <svg class="w-4 h-4 text-brand-gold mr-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Para Empresas (PJ)
+                        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory border border-brand-border hover:border-brand-goldLight" data-filter="empresas">
+                            <svg class="w-4 h-4 text-brand-goldLight mr-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Para Empresas (PJ)
                         </button>
-                        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="individuos">
-                            <svg class="w-4 h-4 text-brand-gold mr-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> Para Você (PF)
+                        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory border border-brand-border hover:border-brand-goldLight" data-filter="individuos">
+                            <svg class="w-4 h-4 text-brand-goldLight mr-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> Para Você (PF)
                         </button>
                     </div>
                 </div>
@@ -275,10 +276,10 @@
                     <!-- Card 1: Tributário & Patrimonial (PJ) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3-1m0 0l3 1m-3-1v15m9-15l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M18 7l3-1m0 0l3 1m-3-1v15M6 21h12"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporate</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Corporate</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Direito Tributário
                             </h3>
@@ -287,7 +288,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20consultoria%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -295,10 +296,10 @@
                     <!-- Card 2: Proteção Patrimonial & Holdings (PJ) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Patrimonial</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Patrimonial</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Proteção Patrimonial & Holdings
                             </h3>
@@ -307,7 +308,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tenho%20interesse%20em%20Prote%C3%A7%C3%A3o%20Patrimonial%20e%20Holdings." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -315,10 +316,10 @@
                     <!-- Card 3: Direito da Saúde & Liminares (PF) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-3-3v6m-7 5h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Plantão de Urgência</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Plantão de Urgência</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Direito à Saúde & Liminares
                             </h3>
@@ -327,7 +328,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Preciso%20de%20ajuda%20urgente%20com%20Negativa%20de%20Plano%20de%20Sa%C3%BAde." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -335,10 +336,10 @@
                     <!-- Card 4: Direito Bancário e Fraudes (PF) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 14v5m4-5v5m4-5v5M3 10h18M3 7l9-4 9 4M4 10h16v9a1 1 0 01-1 1H5a1 1 0 01-1-1v-9zM2 20h20"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Defesa Financeira</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Defesa Financeira</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Bancário & Fraudes Digitais
                             </h3>
@@ -347,7 +348,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20consultoria%20sobre%20problemas%20com%20Banco%20ou%20Golpe%20Financeiro." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -355,10 +356,10 @@
                     <!-- Card 5: Contratos & Societário (PJ) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporativo</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Corporativo</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Contratos & Assessoria Empresarial
                             </h3>
@@ -367,7 +368,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20conhecer%20a%20assessoria%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -375,10 +376,10 @@
                     <!-- Card 6: Defesa do Consumidor e Aéreo (PF) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Consumidor</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Consumidor</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Direito Aéreo & Consumidor
                             </h3>
@@ -387,7 +388,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tive%20problemas%20com%20voo%20ou%20bagagem%20e%20quero%20indeniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -395,10 +396,10 @@
                     <!-- Card 7: Isenção de IRPF para Aposentados (PF VIP) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Tributário / PF</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Tributário / PF</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Isenção de IRPF (Doença Grave)
                             </h3>
@@ -407,7 +408,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20analisar%20meu%20direito%20%C3%A0%20Isen%C3%A7%C3%A3o%20de%20Imposto%20de%20Renda." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -415,10 +416,10 @@
                     <!-- Card 8: Direito Digital & Compliance (PJ) -->
                     <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-goldLight mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11m0 0a8 8 0 00.99 7.132"></path></svg>
                             </div>
-                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Inovação</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-goldLight bg-brand-surface border border-brand-border px-2 py-0.5 rounded inline-block mb-2">Inovação</span>
                             <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
                                 Direito Digital & LGPD
                             </h3>
@@ -427,7 +428,7 @@
                             </p>
                         </div>
                         <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20ajuda%20com%20Direito%20Digital%20e%20LGPD." target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                           class="inline-flex items-center text-xs font-semibold text-brand-goldLight hover:text-brand-ivory pt-4 border-t border-brand-border/40">
                             Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
                         </a>
                     </div>
@@ -449,7 +450,7 @@
                             <div class="relative bg-brand-card p-8 rounded-2xl border border-brand-gold/40 shadow-2xl flex flex-col items-center text-center">
                                 
                                 <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-brand-gold p-1.5 mb-6 relative overflow-hidden shadow-2xl bg-brand-surface flex items-center justify-center">
-                                    <img src="foto rosto.webp" 
+                                    <img src="foto-rosto.webp" 
                                          alt="Dr. Thiago Rangel - Advogado Fundador" 
                                          width="192"
                                          height="192"
@@ -458,7 +459,7 @@
                                 </div>
 
                                 <div class="font-serif text-2xl font-bold text-brand-ivory mb-1">Dr. Thiago Rangel</div>
-                                <p class="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4">Advogado Fundador</p>
+                                <p class="text-xs font-semibold uppercase tracking-widest text-brand-goldLight mb-4">Advogado Fundador</p>
                                 
                                 <div class="w-16 h-0.5 bg-brand-border mb-5"></div>
                                 
@@ -467,8 +468,8 @@
                                 </p>
 
                                 <!-- Badge OAB -->
-                                <div class="inline-flex items-center px-4 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-[11px] text-brand-ivory/80">
-                                    <svg class="w-4 h-4 text-brand-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v5m4-5v5m4-5v5M3 10h18M3 7l9-4 9 4M4 10h16v9a1 1 0 01-1 1H5a1 1 0 01-1-1v-9zM2 20h20"></path></svg>
+                                <div class="inline-flex items-center px-4 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-[11px] text-brand-ivory">
+                                    <svg class="w-4 h-4 text-brand-goldLight mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v5m4-5v5m4-5v5M3 10h18M3 7l9-4 9 4M4 10h16v9a1 1 0 01-1 1H5a1 1 0 01-1-1v-9zM2 20h20"></path></svg>
                                     OAB/PR 137768 • Atuação Estratégica
                                 </div>
                             </div>
@@ -477,7 +478,7 @@
 
                     <!-- Coluna Editorial -->
                     <div class="lg:col-span-7">
-                        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Institucional</span>
+                        <span class="text-xs uppercase tracking-[0.25em] text-brand-goldLight font-semibold">Institucional</span>
                         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-6">
                             Uma Advocacia Construída na Prática, na Estratégia e na Confiança
                         </h2>
@@ -490,10 +491,10 @@
                             Combinamos a visão de inteligência corporativa e tributária com uma atuação defensiva resolutiva para pessoas físicas. Seja estruturando a proteção patrimonial de um negócio ou garantindo uma liminar de saúde em caráter de urgência, nossa postura é pautada por técnica cirúrgica, discrição e comunicação transparente.
                         </p>
 
-                        <!-- Pilares com hierarquia semântica H3 corrigida -->
+                        <!-- Pilares H3 -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-4 h-4 text-brand-goldLight mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                                 <div>
                                     <h3 class="text-sm font-semibold text-brand-ivory">Sem Juridiquês</h3>
                                     <p class="text-xs text-brand-muted mt-0.5 font-light">Comunicação clara com foco em soluções práticas e decisões conscientes.</p>
@@ -501,7 +502,7 @@
                             </div>
 
                             <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-4 h-4 text-brand-goldLight mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                                 <div>
                                     <h3 class="text-sm font-semibold text-brand-ivory">Prontidão e Resposta</h3>
                                     <p class="text-xs text-brand-muted mt-0.5 font-light">Atualizações periódicas do andamento do seu processo diretamente no WhatsApp.</p>
@@ -509,7 +510,7 @@
                             </div>
 
                             <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-4 h-4 text-brand-goldLight mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                                 <div>
                                     <h3 class="text-sm font-semibold text-brand-ivory">Estrutura Híbrida</h3>
                                     <p class="text-xs text-brand-muted mt-0.5 font-light">Ambiente físico privativo em Umuarama e operação 100% digital em todo o país.</p>
@@ -517,7 +518,7 @@
                             </div>
 
                             <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <svg class="w-4 h-4 text-brand-goldLight mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
                                 <div>
                                     <h3 class="text-sm font-semibold text-brand-ivory">Segurança & Previsibilidade</h3>
                                     <p class="text-xs text-brand-muted mt-0.5 font-light">Rigor técnico na avaliação de riscos antes de propor qualquer medida judicial.</p>
@@ -535,7 +536,7 @@
         <section id="diferenciais" class="py-24 bg-brand-black">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Vantagens Concretas</span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-goldLight font-semibold">Vantagens Concretas</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
                         O Que Nos Torna o Parceiro Certo
                     </h2>
@@ -546,9 +547,9 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
-                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-goldLight transition-all duration-300">
                         <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors" aria-hidden="true">01</span>
-                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight text-xl mb-6">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Estratégia e Alta Precisão</h3>
@@ -557,9 +558,9 @@
                         </p>
                     </div>
 
-                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-goldLight transition-all duration-300">
                         <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors" aria-hidden="true">02</span>
-                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight text-xl mb-6">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Velocidade e Prontidão</h3>
@@ -568,9 +569,9 @@
                         </p>
                     </div>
 
-                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-goldLight transition-all duration-300">
                         <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors" aria-hidden="true">03</span>
-                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight text-xl mb-6">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Mentalidade de Negócios</h3>
@@ -588,7 +589,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Inicie seu Atendimento</span>
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-goldLight font-semibold">Inicie seu Atendimento</span>
                     <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
                         Agende sua Consulta Jurídica
                     </h2>
@@ -605,19 +606,19 @@
                             
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="client-name" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Seu Nome Completo *</label>
+                                    <label for="client-name" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory mb-2">Seu Nome Completo *</label>
                                     <input type="text" id="client-name" required placeholder="Ex: Roberto Silva" 
-                                           class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
+                                           class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/70 focus:outline-none focus:border-brand-gold transition-colors">
                                 </div>
                                 <div>
-                                    <label for="client-phone" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">WhatsApp / Telefone *</label>
+                                    <label for="client-phone" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory mb-2">WhatsApp / Telefone *</label>
                                     <input type="tel" id="client-phone" required placeholder="(44) 98441-0950" 
-                                           class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
+                                           class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/70 focus:outline-none focus:border-brand-gold transition-colors">
                                 </div>
                             </div>
 
                             <div>
-                                <label for="service-area" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Qual assunto você deseja tratar? *</label>
+                                <label for="service-area" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory mb-2">Qual assunto você deseja tratar? *</label>
                                 <select id="service-area" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold transition-colors">
                                     <option value="" disabled selected>Selecione uma área...</option>
                                     <option value="Direito Tributário / Fiscal">Direito Tributário / Recuperação & Defesas</option>
@@ -633,9 +634,9 @@
                             </div>
 
                             <div>
-                                <label for="client-message" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Resumo da sua situação (Opcional)</label>
+                                <label for="client-message" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory mb-2">Resumo da sua situação (Opcional)</label>
                                 <textarea id="client-message" rows="3" placeholder="Descreva brevemente sua necessidade para um atendimento mais ágil..." 
-                                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors"></textarea>
+                                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-ivory placeholder-brand-muted/70 focus:outline-none focus:border-brand-gold transition-colors"></textarea>
                             </div>
 
                             <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/20 flex items-center justify-center">
@@ -643,7 +644,7 @@
                                 Enviar Mensagem no WhatsApp
                             </button>
                             
-                            <p class="text-[11px] text-center text-brand-muted">
+                            <p class="text-xs text-center text-brand-muted">
                                 Seus dados estão protegidos sob sigilo profissional nos termos da legislação vigente.
                             </p>
                         </form>
@@ -659,7 +660,7 @@
                             
                             <ul class="space-y-5 text-sm">
                                 <li class="flex items-start space-x-3">
-                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight shrink-0">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                                     </div>
                                     <div>
@@ -671,29 +672,29 @@
                                 </li>
 
                                 <li class="flex items-start space-x-3">
-                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight shrink-0">
                                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                                     </div>
                                     <div>
                                         <span class="block text-xs uppercase font-semibold text-brand-muted">WhatsApp Oficial</span>
-                                        <a href="https://wa.me/5544984410950" class="text-brand-ivory hover:text-brand-gold font-medium transition-colors">
+                                        <a href="https://wa.me/5544984410950" class="text-brand-ivory hover:text-brand-goldLight font-medium transition-colors">
                                             (44) 98441-0950
                                         </a>
                                     </div>
                                 </li>
 
                                 <li class="flex items-start space-x-3">
-                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight shrink-0">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     </div>
                                     <div>
                                         <span class="block text-xs uppercase font-semibold text-brand-muted">E-mail de Contato</span>
-                                        <a href="mailto:thiagorangel.advogado@gmail.com" class="text-brand-ivory font-medium hover:text-brand-gold transition-colors">thiagorangel.advogado@gmail.com</a>
+                                        <a href="mailto:thiagorangel.advogado@gmail.com" class="text-brand-ivory font-medium hover:text-brand-goldLight transition-colors">thiagorangel.advogado@gmail.com</a>
                                     </div>
                                 </li>
 
                                 <li class="flex items-start space-x-3">
-                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-goldLight shrink-0">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                     </div>
                                     <div>
@@ -704,7 +705,7 @@
                             </ul>
                         </div>
 
-                        <!-- Card Social (Apenas Instagram com link ativo) -->
+                        <!-- Card Social (Instagram Oficial) -->
                         <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex items-center justify-between">
                             <div>
                                 <span class="block text-xs uppercase font-semibold text-brand-muted">Acompanhe no Instagram</span>
@@ -713,7 +714,7 @@
                             <div>
                                 <a href="https://instagram.com/thiagorangel.advogado" target="_blank" rel="noopener noreferrer" 
                                    aria-label="Perfil oficial de Thiago Rangel no Instagram"
-                                   class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors">
+                                   class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-goldLight hover:border-brand-goldLight transition-colors">
                                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                                 </a>
                             </div>
@@ -738,7 +739,7 @@
                 <!-- Coluna 1: Logo Oficial -->
                 <div class="md:col-span-5 space-y-4">
                     <div class="flex items-center">
-                        <img src="logo horizontal.webp" 
+                        <img src="logo-horizontal.webp" 
                              alt="Thiago Rangel Advocacia & Consultoria" 
                              width="260"
                              height="56"
@@ -754,11 +755,11 @@
                 <div class="md:col-span-3 space-y-3">
                     <div class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Navegação</div>
                     <ul class="space-y-2">
-                        <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Início</a></li>
-                        <li><a href="#areas" class="hover:text-brand-gold transition-colors">Áreas de Atuação</a></li>
-                        <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Dr. Thiago Rangel</a></li>
-                        <li><a href="#diferenciais" class="hover:text-brand-gold transition-colors">Diferenciais</a></li>
-                        <li><a href="#contato" class="hover:text-brand-gold transition-colors">Fale Conosco</a></li>
+                        <li><a href="#inicio" class="hover:text-brand-goldLight transition-colors">Início</a></li>
+                        <li><a href="#areas" class="hover:text-brand-goldLight transition-colors">Áreas de Atuação</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-goldLight transition-colors">Dr. Thiago Rangel</a></li>
+                        <li><a href="#diferenciais" class="hover:text-brand-goldLight transition-colors">Diferenciais</a></li>
+                        <li><a href="#contato" class="hover:text-brand-goldLight transition-colors">Fale Conosco</a></li>
                     </ul>
                 </div>
 
@@ -777,9 +778,9 @@
             <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] space-y-4 sm:space-y-0">
                 <p>&copy; 2026 Thiago Rangel Advocacia & Consultoria. Todos os direitos reservados.</p>
                 <div class="flex space-x-6">
-                    <a href="#" class="hover:text-brand-gold transition-colors">Termos de Uso</a>
-                    <a href="#" class="hover:text-brand-gold transition-colors">Política de Privacidade</a>
-                    <a href="#" class="hover:text-brand-gold transition-colors">Conformidade LGPD</a>
+                    <a href="#" class="hover:text-brand-goldLight transition-colors">Termos de Uso</a>
+                    <a href="#" class="hover:text-brand-goldLight transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-brand-goldLight transition-colors">Conformidade LGPD</a>
                 </div>
             </div>
 
@@ -824,10 +825,10 @@
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
                     b.classList.remove('bg-brand-gold', 'text-brand-black');
-                    b.classList.add('bg-brand-card', 'text-brand-ivory/80');
+                    b.classList.add('bg-brand-card', 'text-brand-ivory');
                 });
                 btn.classList.add('bg-brand-gold', 'text-brand-black');
-                btn.classList.remove('bg-brand-card', 'text-brand-ivory/80');
+                btn.classList.remove('bg-brand-card', 'text-brand-ivory');
 
                 const filter = btn.getAttribute('data-filter');
 
@@ -841,7 +842,7 @@
             });
         });
 
-        // 3. Redirecionamento Dinâmico do Formulário para WhatsApp
+        // 3. Redirecionamento Dinâmico para WhatsApp
         const contactForm = document.getElementById('contact-form');
         const toast = document.getElementById('toast');
         const toastMessage = document.getElementById('toast-message');
@@ -884,7 +885,7 @@
             }, 700);
         });
 
-        // 4. Efeito de Sombra e Redução no Header ao Rolar a Página
+        // 4. Header Scroll
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
             if (window.scrollY > 40) {
