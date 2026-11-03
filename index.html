@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiago Rangel | Advocacia & Consultoria Estratégica</title>
-    <meta name="description" content="Advocacia corporativa e consultoria jurídica de alto padrão em Umuarama - PR e em todo o Brasil. Atuação especializada em Direito Tributário, Empresarial, Saúde e Bancário.">
+    <title>Thiago Rangel | Advocacia & Consultoria Estratégica em Umuarama - PR</title>
+    <meta name="description" content="Advocacia corporativa e consultoria jurídica de alto padrão em Umuarama - PR e atuação nacional. Especialista em Direito Tributário, Saúde, Bancário e Holdings.">
     
-    <!-- Favicon / Ícone da Aba do Navegador -->
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
-    <link rel="apple-touch-icon" href="favicon.png?v=2">
+    <!-- URL Canônica -->
+    <link rel="canonical" href="https://www.advogadothiagorangel.com.br/">
 
-    <!-- Google Fonts -->
+    <!-- Open Graph (Cards para WhatsApp e Redes Sociais) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://www.advogadothiagorangel.com.br/">
+    <meta property="og:title" content="Thiago Rangel | Advocacia & Consultoria Estratégica">
+    <meta property="og:description" content="Soluções jurídicas combativas e de alta precisão técnica em Umuarama-PR e em todo o Brasil.">
+    <meta property="og:image" content="https://www.advogadothiagorangel.com.br/foto.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Google Fonts com preconnect otimizado -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +42,7 @@
                             goldDark: '#8F6F38',
                             ivory: '#F5F2EC',
                             titanium: '#5C5C5C',
-                            muted: '#9E9E9E',
+                            muted: '#B5B5B5', // Ajustado para contraste perfeito WCAG AA
                             border: 'rgba(185, 148, 88, 0.22)'
                         }
                     },
@@ -45,6 +53,33 @@
                 }
             }
         }
+    </script>
+
+    <!-- Schema.org (Dados Estruturados para o Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Thiago Rangel Advocacia & Consultoria",
+      "image": "https://www.advogadothiagorangel.com.br/logo.png",
+      "url": "https://www.advogadothiagorangel.com.br",
+      "telephone": "+5544984410950",
+      "email": "thiagorangel.advogado@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Pres. Castelo Branco, 3806, Sala 504-A, Zona VI",
+        "addressLocality": "Umuarama",
+        "addressRegion": "PR",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$"
+    }
     </script>
 
     <style>
@@ -90,8 +125,8 @@
 <body class="bg-brand-black text-brand-ivory font-sans antialiased selection:bg-brand-gold selection:text-brand-black">
 
     <!-- NOTIFICAÇÃO TOAST -->
-    <div id="toast" class="fixed top-24 right-5 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-brand-card border border-brand-gold text-brand-ivory px-5 py-4 rounded-xl shadow-2xl flex items-center space-x-3 pointer-events-none">
-        <i class="fa-solid fa-circle-check text-brand-gold text-xl"></i>
+    <div id="toast" class="fixed top-24 right-5 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-brand-card border border-brand-gold text-brand-ivory px-5 py-4 rounded-xl shadow-2xl flex items-center space-x-3 pointer-events-none" role="alert" aria-live="assertive">
+        <svg class="w-5 h-5 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         <div id="toast-message" class="text-sm font-medium">Redirecionando para o WhatsApp...</div>
     </div>
 
@@ -99,16 +134,17 @@
     <header class="fixed top-0 left-0 w-full z-40 glass-header border-b border-brand-border/40 transition-all duration-300" id="main-header">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- Logo Oficial Apontando para logo.png (com fallback inteligente para .png.png) -->
-            <a href="#" class="flex items-center group">
+            <!-- Logo Oficial -->
+            <a href="#inicio" class="flex items-center group" aria-label="Ir para o início">
                 <img src="logo.png" 
                      alt="Thiago Rangel Advocacia & Consultoria" 
-                     class="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-transform group-hover:scale-105"
-                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='logo.png.png';}">
+                     width="240"
+                     height="48"
+                     class="h-10 sm:h-12 w-auto max-w-[200px] sm:max-w-[240px] object-contain transition-transform group-hover:scale-105">
             </a>
 
             <!-- Menu Desktop -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-ivory/80">
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-ivory/80" aria-label="Navegação Principal">
                 <a href="#inicio" class="hover:text-brand-gold transition-colors py-1">Início</a>
                 <a href="#areas" class="hover:text-brand-gold transition-colors py-1">Áreas de Atuação</a>
                 <a href="#sobre" class="hover:text-brand-gold transition-colors py-1">O Escritório</a>
@@ -120,14 +156,14 @@
             <div class="hidden sm:flex items-center">
                 <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" 
                    class="inline-flex items-center px-4 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all duration-300 shadow-sm">
-                    <i class="fa-brands fa-whatsapp text-sm mr-2"></i>
+                    <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                     Atendimento Direto
                 </a>
             </div>
 
             <!-- Botão Mobile Menu Hamburger -->
-            <button id="mobile-menu-btn" aria-label="Abrir Menu de Navegação" class="md:hidden text-brand-ivory hover:text-brand-gold focus:outline-none p-2">
-                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            <button id="mobile-menu-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false" class="md:hidden text-brand-ivory hover:text-brand-gold focus:outline-none p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
 
@@ -141,576 +177,582 @@
             <div class="pt-2">
                 <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" 
                    class="w-full flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-colors">
-                    <i class="fa-brands fa-whatsapp text-base mr-2"></i> Falar com o Advogado
+                    <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Falar com o Advogado
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- ================= 2. HERO SECTION (DOBRA PRINCIPAL) ================= -->
-    <section id="inicio" class="hero-pattern pt-32 sm:pt-40 pb-20 sm:pb-32 relative overflow-hidden border-b border-brand-border/30">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            
-            <!-- Badge Superior -->
-            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-gold/40 text-[11px] sm:text-xs text-brand-goldLight tracking-wider uppercase mb-8 shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-                <span>Advocacia de Alta Performance • Sede em Umuarama-PR</span>
-            </div>
+    <!-- INÍCIO DO CONTEÚDO PRINCIPAL (TAG MAIN OBRIGATÓRIA PARA ACESSIBILIDADE) -->
+    <main id="conteudo-principal">
 
-            <!-- Título Principal -->
-            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-ivory max-w-4xl mx-auto leading-tight sm:leading-tight mb-6">
-                Soluções Jurídicas Estratégicas para <span class="gold-gradient-text">Você</span>
-            </h1>
-
-            <!-- Subtítulo -->
-            <p class="text-brand-muted text-base sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-light">
-                Advocacia combativa, ágil e de alta precisão técnica. Protegemos seus direitos e o seu patrimônio com discrição, prontidão e foco absoluto em resultados.
-            </p>
-
-            <!-- Chamadas para Ação (CTAs) -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 max-w-md mx-auto">
-                <a href="https://wa.me/5544984410950" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-brand-gold/15 flex items-center justify-center">
-                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>
-                    Fale Conosco
-                </a>
-                <a href="#areas" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold tracking-wider text-brand-ivory border border-brand-border bg-brand-card/60 hover:bg-brand-surface hover:border-brand-gold/50 transition-all duration-300 flex items-center justify-center">
-                    Conhecer Áreas
-                    <i class="fa-solid fa-arrow-down-long ml-2 text-xs text-brand-gold"></i>
-                </a>
-            </div>
-
-            <!-- Badges de Autoridade -->
-            <div class="mt-16 pt-10 border-t border-brand-border/30 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
-                <div class="p-2">
-                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Alta Precisão</div>
-                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Estratégia Customizada</div>
+        <!-- ================= 2. HERO SECTION ================= -->
+        <section id="inicio" class="hero-pattern pt-32 sm:pt-40 pb-20 sm:pb-32 relative overflow-hidden border-b border-brand-border/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                
+                <!-- Badge Superior -->
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-gold/40 text-[11px] sm:text-xs text-brand-goldLight tracking-wider uppercase mb-8 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                    <span>Advocacia de Alta Performance • Sede em Umuarama-PR</span>
                 </div>
-                <div class="p-2">
-                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Agilidade</div>
-                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Plantão de Liminares</div>
-                </div>
-                <div class="p-2">
-                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Nacional</div>
-                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Processos 100% Digitais</div>
-                </div>
-                <div class="p-2">
-                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Segurança</div>
-                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Gestão de Riscos</div>
-                </div>
-            </div>
 
-        </div>
-    </section>
+                <!-- Título Principal com Palavras-Chave Estratégicas -->
+                <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-ivory max-w-4xl mx-auto leading-tight sm:leading-tight mb-6">
+                    Soluções Jurídicas Estratégicas para <span class="gold-gradient-text">Você</span>
+                </h1>
 
-    <!-- ================= 3. ÁREAS DE ATUAÇÃO ================= -->
-    <section id="areas" class="py-24 bg-brand-black relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-14">
-                <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Portfólio Jurídico</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
-                    Atuação Estruturada e Focada no seu Objetivo
-                </h2>
-                <p class="text-brand-muted text-sm sm:text-base font-light">
-                    Soluções sob medida para o ambiente corporativo e pronta resposta para a defesa dos direitos individuais e patrimoniais da sua família.
+                <!-- Subtítulo -->
+                <p class="text-brand-muted text-base sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+                    Advocacia combativa, ágil e de alta precisão técnica. Protegemos seus direitos e o seu patrimônio com discrição, prontidão e foco absoluto em resultados.
                 </p>
 
-                <!-- Botões de Alternância das Abas -->
-                <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
-                    <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-gold text-brand-black" data-filter="all">
-                        Todas as Áreas
-                    </button>
-                    <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="empresas">
-                        <i class="fa-solid fa-briefcase text-brand-gold mr-1.5"></i> Para Empresas (PJ)
-                    </button>
-                    <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="individuos">
-                        <i class="fa-solid fa-user-shield text-brand-gold mr-1.5"></i> Para Você (PF)
-                    </button>
-                </div>
-            </div>
-
-            <!-- Grid de Cards de Atuação -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="areas-grid">
-                
-                <!-- Card 1: Tributário & Patrimonial (PJ) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-scale-balanced text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporate</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Direito Tributário
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Recuperação de créditos tributários indevidos, planejamento tributário preventivo, defesas fiscais administrativas e judiciais federais, estaduais e municipais.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20consultoria%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                <!-- Chamadas para Ação (CTAs) -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 max-w-md mx-auto">
+                    <a href="https://wa.me/5544984410950" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-brand-gold/15 flex items-center justify-center">
+                        <svg class="w-4 h-4 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        Fale Conosco
+                    </a>
+                    <a href="#areas" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold tracking-wider text-brand-ivory border border-brand-border bg-brand-card/60 hover:bg-brand-surface hover:border-brand-gold/50 transition-all duration-300 flex items-center justify-center">
+                        Conhecer Áreas
+                        <svg class="w-3.5 h-3.5 ml-2 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </a>
                 </div>
 
-                <!-- Card 2: Proteção Patrimonial & Holdings (PJ) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-vault text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Patrimonial</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Proteção Patrimonial & Holdings
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Estruturação jurídica de holdings familiares e empresariais, blindagem legítima de bens de sócios contra riscos operacionais e planejamento sucessório inteligente.
-                        </p>
+                <!-- Badges de Autoridade -->
+                <div class="mt-16 pt-10 border-t border-brand-border/30 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+                    <div class="p-2">
+                        <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Alta Precisão</div>
+                        <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Estratégia Customizada</div>
                     </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tenho%20interesse%20em%20Prote%C3%A7%C3%A3o%20Patrimonial%20e%20Holdings." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Card 3: Direito da Saúde & Liminares (PF) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-notes-medical text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Plantão de Urgência</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Direito à Saúde & Liminares
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Medidas com pedido de tutela de urgência (liminar) para fornecimento de medicamentos de alto custo, autorização de cirurgias, internações e home care negados por planos de saúde.
-                        </p>
+                    <div class="p-2">
+                        <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Agilidade</div>
+                        <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Plantão de Liminares</div>
                     </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Preciso%20de%20ajuda%20urgente%20com%20Negativa%20de%20Plano%20de%20Sa%C3%BAde." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Card 4: Direito Bancário e Fraudes (PF) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-building-columns text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Defesa Financeira</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Bancário & Fraudes Digitais
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Recuperação de valores perdidos em golpes do Pix e fraudes financeiras, proteção patrimonial e combate a cobranças indevidas e juros contratuais abusivos.
-                        </p>
+                    <div class="p-2">
+                        <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Nacional</div>
+                        <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Processos 100% Digitais</div>
                     </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20consultoria%20sobre%20problemas%20com%20Banco%20ou%20Golpe%20Financeiro." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Card 5: Contratos & Societário (PJ) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-file-signature text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporativo</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Contratos & Assessoria Empresarial
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Elaboração e revisão minuciosa de contratos comerciais complexos, assessoria jurídica preventiva continuada e gestão técnica de passivos corporativos.
-                        </p>
+                    <div class="p-2">
+                        <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Segurança</div>
+                        <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Gestão de Riscos</div>
                     </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20conhecer%20a%20assessoria%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Card 6: Defesa do Consumidor e Aéreo (PF) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-plane-slash text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Consumidor</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Direito Aéreo & Consumidor
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Indenizações por cancelamentos ou atrasos graves de voos nacionais e internacionais, extravio ou dano de bagagens, overbooking e práticas comerciais lesivas.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tive%20problemas%20com%20voo%20ou%20bagagem%20e%20quero%20indeniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Card 7: Isenção de IRPF para Aposentados (PF VIP) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-receipt text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Tributário / PF</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Isenção de IRPF (Doença Grave)
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Concessão de isenção total do Imposto de Renda sobre proventos de aposentadoria e pensão para portadores de doenças graves, com restituição retroativa dos últimos 5 anos.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20analisar%20meu%20direito%20%C3%A0%20Isen%C3%A7%C3%A3o%20de%20Imposto%20de%20Renda." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
-                </div>
-
-                <!-- Card 8: Direito Digital & Compliance (PJ) -->
-                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
-                            <i class="fa-solid fa-fingerprint text-xl"></i>
-                        </div>
-                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Inovação</span>
-                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
-                            Direito Digital & LGPD
-                        </h3>
-                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
-                            Adequação corporativa à LGPD, remoção célere de conteúdos ilícitos e difamatórios na internet, recuperação judicial de perfis e defesa contra vazamento de dados.
-                        </p>
-                    </div>
-                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20ajuda%20com%20Direito%20Digital%20e%20LGPD." target="_blank" rel="noopener noreferrer" 
-                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
-                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
-                    </a>
                 </div>
 
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- ================= 4. SOBRE O ESCRITÓRIO ================= -->
-    <section id="sobre" class="py-24 bg-brand-card/40 border-y border-brand-border/30 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- ================= 3. ÁREAS DE ATUAÇÃO ================= -->
+        <section id="areas" class="py-24 bg-brand-black relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Coluna Visual / Cartão com a Foto Oficial do Dr. Thiago Rangel -->
-                <div class="lg:col-span-5">
-                    <div class="relative mx-auto max-w-sm lg:max-w-none">
-                        <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-gold to-brand-goldDark rounded-2xl blur opacity-30"></div>
-                        <div class="relative bg-brand-card p-8 rounded-2xl border border-brand-gold/40 shadow-2xl flex flex-col items-center text-center">
-                            
-                            <!-- Círculo Central com Borda Dourada com a Foto do Advogado -->
-                            <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-brand-gold p-1.5 mb-6 relative overflow-hidden shadow-2xl bg-brand-surface flex items-center justify-center">
-                                <img src="foto.jpg" 
-                                     alt="Dr. Thiago Rangel - Advogado Fundador" 
-                                     class="w-full h-full object-cover rounded-full"
-                                     onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='foto.jpg.jpg';}">
-                            </div>
-
-                            <h3 class="font-serif text-2xl font-bold text-brand-ivory mb-1">Dr. Thiago Rangel</h3>
-                            <p class="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4">Advogado Fundador</p>
-                            
-                            <div class="w-16 h-0.5 bg-brand-border mb-5"></div>
-                            
-                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-6">
-                                "A advocacia moderna exige postura estratégica e desprendimento de formalismos ineficientes. Nosso papel é entregar soluções seguras e viáveis para proteger quem produz e quem confia em nós."
-                            </p>
-
-                            <!-- Badge OAB -->
-                            <div class="inline-flex items-center px-4 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-[11px] text-brand-ivory/80">
-                                <i class="fa-solid fa-landmark text-brand-gold mr-2"></i>
-                                OAB/PR 137768 • Atuação Estratégica
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Coluna Editorial -->
-                <div class="lg:col-span-7">
-                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Institucional</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-6">
-                        Uma Advocacia Construída na Prática, na Estratégia e na Confiança
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Portfólio Jurídico</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
+                        Atuação Estruturada e Focada no seu Objetivo
                     </h2>
-                    
-                    <p class="text-brand-muted text-base leading-relaxed font-light mb-6">
-                        O escritório <strong class="text-brand-ivory font-medium">Thiago Rangel Advocacia & Consultoria</strong> nasceu com a missão clara de romper com a lentidão e o excesso de burocracias vazias do meio jurídico convencional. 
-                    </p>
-                    
-                    <p class="text-brand-muted text-base leading-relaxed font-light mb-8">
-                        Combinamos a visão de inteligência corporativa e tributária com uma atuação defensiva resolutiva para pessoas físicas. Seja estruturando a proteção patrimonial de um negócio ou garantindo uma liminar de saúde em caráter de urgência, nossa postura é pautada por técnica cirúrgica, discrição e comunicação transparente.
+                    <p class="text-brand-muted text-sm sm:text-base font-light">
+                        Soluções sob medida para o ambiente corporativo e pronta resposta para a defesa dos direitos individuais e patrimoniais da sua família.
                     </p>
 
-                    <!-- Lista de Pilares do Escritório -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
-                            <div>
-                                <h4 class="text-sm font-semibold text-brand-ivory">Sem Juridiquês</h4>
-                                <p class="text-xs text-brand-muted mt-0.5 font-light">Comunicação clara com foco em soluções práticas e decisões conscientes.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
-                            <div>
-                                <h4 class="text-sm font-semibold text-brand-ivory">Prontidão e Resposta</h4>
-                                <p class="text-xs text-brand-muted mt-0.5 font-light">Atualizações periódicas do andamento do seu processo diretamente no WhatsApp.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
-                            <div>
-                                <h4 class="text-sm font-semibold text-brand-ivory">Estrutura Híbrida</h4>
-                                <p class="text-xs text-brand-muted mt-0.5 font-light">Ambiente físico privativo em Umuarama e operação 100% digital em todo o país.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
-                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
-                            <div>
-                                <h4 class="text-sm font-semibold text-brand-ivory">Segurança & Previsibilidade</h4>
-                                <p class="text-xs text-brand-muted mt-0.5 font-light">Rigor técnico na avaliação de riscos antes de propor qualquer medida judicial.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= 5. DIFERENCIAIS ================= -->
-    <section id="diferenciais" class="py-24 bg-brand-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Vantagens Concretas</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
-                    O Que Nos Torna o Parceiro Certo
-                </h2>
-                <p class="text-brand-muted text-sm sm:text-base font-light">
-                    Segurança para tomar decisões financeiras e patrimoniais com a convicção de estar amparado por uma defesa consistente.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">01</span>
-                    <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
-                        <i class="fa-solid fa-chess-knight"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Estratégia e Alta Precisão</h3>
-                    <p class="text-sm text-brand-muted leading-relaxed font-light">
-                        Cada demanda é analisada sob uma perspectiva multidisciplinar, unindo visão contábil, proteção patrimonial e argumentação jurídica combativa.
-                    </p>
-                </div>
-
-                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">02</span>
-                    <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
-                        <i class="fa-solid fa-gauge-high"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Velocidade e Prontidão</h3>
-                    <p class="text-sm text-brand-muted leading-relaxed font-light">
-                        Processos judiciais exigem respostas ágeis. Atuamos com canal prioritário para situações emergenciais de saúde, bloqueios indevidos e prazos fiscais.
-                    </p>
-                </div>
-
-                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
-                    <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">03</span>
-                    <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-                    <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Mentalidade de Negócios</h3>
-                    <p class="text-sm text-brand-muted leading-relaxed font-light">
-                        Avaliamos riscos e impactos financeiros antes de qualquer litígio. Nosso objetivo central é defender seus interesses com a maior eficiência e o menor desgaste possível.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= 6. FORMULÁRIO DE CONTATO & LOCALIZAÇÃO ================= -->
-    <section id="contato" class="py-24 bg-brand-card/30 border-t border-brand-border/30 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Inicie seu Atendimento</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
-                    Agende sua Consulta Jurídica
-                </h2>
-                <p class="text-brand-muted text-sm sm:text-base font-light">
-                    Preencha o formulário para ser direcionado ao WhatsApp com sua demanda pré-formatada ou utilize nossos canais oficiais.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                
-                <!-- Formulário com redirecionamento dinâmico para WhatsApp -->
-                <div class="lg:col-span-7 bg-brand-card p-8 sm:p-10 rounded-2xl border border-brand-border shadow-2xl">
-                    <form id="contact-form" class="space-y-6">
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label for="client-name" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Seu Nome Completo *</label>
-                                <input type="text" id="client-name" required placeholder="Ex: Roberto Silva" 
-                                       class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
-                            </div>
-                            <div>
-                                <label for="client-phone" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">WhatsApp / Telefone *</label>
-                                <input type="tel" id="client-phone" required placeholder="(44) 98441-0950" 
-                                       class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="service-area" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Qual assunto você deseja tratar? *</label>
-                            <select id="service-area" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold transition-colors">
-                                <option value="" disabled selected>Selecione uma área...</option>
-                                <option value="Direito Tributário / Fiscal">Direito Tributário / Recuperação & Defesas</option>
-                                <option value="Proteção Patrimonial e Holdings">Proteção Patrimonial & Holding Familiar</option>
-                                <option value="Direito da Saúde (Liminares)">Direito à Saúde (Liminar urgente remédio/cirurgia)</option>
-                                <option value="Direito Bancário e Fraudes">Direito Bancário / Golpe do Pix / Juros</option>
-                                <option value="Isenção de IRPF para Aposentados">Isenção de Imposto de Renda (Doença Grave)</option>
-                                <option value="Contratos e Empresarial">Direito Empresarial / Contratos Corporativos</option>
-                                <option value="Problemas com Voo / Consumidor">Problemas com Voo / Extravio de Bagagem</option>
-                                <option value="Direito Digital e LGPD">Direito Digital & LGPD</option>
-                                <option value="Outro Assunto">Outro Assunto Jurídico</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="client-message" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Resumo da sua situação (Opcional)</label>
-                            <textarea id="client-message" rows="3" placeholder="Descreva brevemente sua necessidade para um atendimento mais ágil..." 
-                                      class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/20 flex items-center justify-center">
-                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
-                            Enviar Mensagem no WhatsApp
+                    <!-- Botões de Alternância das Abas -->
+                    <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                        <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-gold text-brand-black" data-filter="all">
+                            Todas as Áreas
                         </button>
-                        
-                        <p class="text-[11px] text-center text-brand-muted">
-                            Seus dados estão protegidos sob sigilo profissional nos termos da legislação vigente.
-                        </p>
-                    </form>
+                        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="empresas">
+                            <svg class="w-4 h-4 text-brand-gold mr-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Para Empresas (PJ)
+                        </button>
+                        <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="individuos">
+                            <svg class="w-4 h-4 text-brand-gold mr-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg> Para Você (PF)
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Detalhes de Endereço e Atendimento -->
-                <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                <!-- Grid de Cards de Atuação -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="areas-grid">
                     
-                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border">
-                        <h3 class="font-serif text-xl font-bold text-brand-ivory mb-6 pb-3 border-b border-brand-border/40">
-                            Informações de Contato
-                        </h3>
-                        
-                        <ul class="space-y-5 text-sm">
-                            <li class="flex items-start space-x-3">
-                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-brand-muted">Endereço da Sede</span>
-                                    <span class="text-brand-ivory font-medium">Av. Pres. Castelo Branco, 3806</span>
-                                    <span class="block text-xs text-brand-muted mt-0.5">Zona VI, Umuarama-PR, Sala 504-A</span>
-                                    <span class="block text-xs text-brand-muted mt-1">Atendimento presencial com agendamento prévio.</span>
-                                </div>
-                            </li>
-
-                            <li class="flex items-start space-x-3">
-                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-brand-muted">WhatsApp Oficial</span>
-                                    <a href="https://wa.me/5544984410950" class="text-brand-ivory hover:text-brand-gold font-medium transition-colors">
-                                        (44) 98441-0950
-                                    </a>
-                                </div>
-                            </li>
-
-                            <li class="flex items-start space-x-3">
-                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-brand-muted">E-mail de Contato</span>
-                                    <a href="mailto:thiagorangel.advogado@gmail.com" class="text-brand-ivory font-medium hover:text-brand-gold transition-colors">thiagorangel.advogado@gmail.com</a>
-                                </div>
-                            </li>
-
-                            <li class="flex items-start space-x-3">
-                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
-                                    <i class="fa-solid fa-clock"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase font-semibold text-brand-muted">Horário de Expediente</span>
-                                    <span class="text-brand-ivory font-medium">Segunda a Sexta: 09:00 às 18:00</span>
-                                </div>
-                            </li>
-                        </ul>
+                    <!-- Card 1: Tributário & Patrimonial (PJ) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3-1m0 0l3 1m-3-1v15m9-15l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M18 7l3-1m0 0l3 1m-3-1v15M6 21h12"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporate</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Direito Tributário
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Recuperação de créditos tributários indevidos, planejamento tributário preventivo, defesas fiscais administrativas e judiciais federais, estaduais e municipais.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20consultoria%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
                     </div>
 
-                    <!-- Card Social / Redes -->
-                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex items-center justify-between">
+                    <!-- Card 2: Proteção Patrimonial & Holdings (PJ) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
                         <div>
-                            <span class="block text-xs uppercase font-semibold text-brand-muted">Acompanhe nas Redes</span>
-                            <span class="text-sm font-semibold text-brand-ivory">@thiagorangel.advogado</span>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Patrimonial</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Proteção Patrimonial & Holdings
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Estruturação jurídica de holdings familiares e empresariais, blindagem legítima de bens de sócios contra riscos operacionais e planejamento sucessório inteligente.
+                            </p>
                         </div>
-                        <div class="flex space-x-2">
-                            <a href="https://instagram.com/thiagorangel.advogado" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors" title="Instagram">
-                                <i class="fa-brands fa-instagram text-base"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors" title="LinkedIn">
-                                <i class="fa-brands fa-linkedin-in text-base"></i>
-                            </a>
-                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors" title="TikTok">
-                                <i class="fa-brands fa-tiktok text-base"></i>
-                            </a>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tenho%20interesse%20em%20Prote%C3%A7%C3%A3o%20Patrimonial%20e%20Holdings." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: Direito da Saúde & Liminares (PF) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-3-3v6m-7 5h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Plantão de Urgência</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Direito à Saúde & Liminares
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Medidas com pedido de tutela de urgência (liminar) para fornecimento de medicamentos de alto custo, autorização de cirurgias, internações e home care negados por planos de saúde.
+                            </p>
                         </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Preciso%20de%20ajuda%20urgente%20com%20Negativa%20de%20Plano%20de%20Sa%C3%BAde." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: Direito Bancário e Fraudes (PF) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 14v5m4-5v5m4-5v5M3 10h18M3 7l9-4 9 4M4 10h16v9a1 1 0 01-1 1H5a1 1 0 01-1-1v-9zM2 20h20"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Defesa Financeira</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Bancário & Fraudes Digitais
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Recuperação de valores perdidos em golpes do Pix e fraudes financeiras, proteção patrimonial e combate a cobranças indevidas e juros contratuais abusivos.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20consultoria%20sobre%20problemas%20com%20Banco%20ou%20Golpe%20Financeiro." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 5: Contratos & Societário (PJ) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporativo</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Contratos & Assessoria Empresarial
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Elaboração e revisão minuciosa de contratos comerciais complexos, assessoria jurídica preventiva continuada e gestão técnica de passivos corporativos.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20conhecer%20a%20assessoria%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 6: Defesa do Consumidor e Aéreo (PF) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Consumidor</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Direito Aéreo & Consumidor
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Indenizações por cancelamentos ou atrasos graves de voos nacionais e internacionais, extravio ou dano de bagagens, overbooking e práticas comerciais lesivas.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tive%20problemas%20com%20voo%20ou%20bagagem%20e%20quero%20indeniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 7: Isenção de IRPF para Aposentados (PF VIP) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Tributário / PF</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Isenção de IRPF (Doença Grave)
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Concessão de isenção total do Imposto de Renda sobre proventos de aposentadoria e pensão para portadores de doenças graves, com restituição retroativa dos últimos 5 anos.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20analisar%20meu%20direito%20%C3%A0%20Isen%C3%A7%C3%A3o%20de%20Imposto%20de%20Renda." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
+                    </div>
+
+                    <!-- Card 8: Direito Digital & Compliance (PJ) -->
+                    <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 004 11m0 0a8 8 0 00.99 7.132"></path></svg>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Inovação</span>
+                            <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                                Direito Digital & LGPD
+                            </h3>
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                                Adequação corporativa à LGPD, remoção célere de conteúdos ilícitos e difamatórios na internet, recuperação judicial de perfis e defesa contra vazamento de dados.
+                            </p>
+                        </div>
+                        <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20ajuda%20com%20Direito%20Digital%20e%20LGPD." target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                            Consultar Especialista <svg class="w-2.5 h-2.5 ml-1.5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                        </a>
                     </div>
 
                 </div>
 
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- ================= 4. SOBRE O ESCRITÓRIO ================= -->
+        <section id="sobre" class="py-24 bg-brand-card/40 border-y border-brand-border/30 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Coluna Visual / Foto Oficial -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-sm lg:max-w-none">
+                            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-gold to-brand-goldDark rounded-2xl blur opacity-30"></div>
+                            <div class="relative bg-brand-card p-8 rounded-2xl border border-brand-gold/40 shadow-2xl flex flex-col items-center text-center">
+                                
+                                <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-2 border-brand-gold p-1.5 mb-6 relative overflow-hidden shadow-2xl bg-brand-surface flex items-center justify-center">
+                                    <img src="foto.jpg" 
+                                         alt="Dr. Thiago Rangel - Advogado Fundador" 
+                                         width="192"
+                                         height="192"
+                                         loading="lazy"
+                                         class="w-full h-full object-cover rounded-full">
+                                </div>
 
-    <!-- ================= 7. FOOTER COMPLETO ================= -->
+                                <div class="font-serif text-2xl font-bold text-brand-ivory mb-1">Dr. Thiago Rangel</div>
+                                <p class="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4">Advogado Fundador</p>
+                                
+                                <div class="w-16 h-0.5 bg-brand-border mb-5"></div>
+                                
+                                <p class="text-xs text-brand-muted leading-relaxed font-light mb-6">
+                                    "A advocacia moderna exige postura estratégica e desprendimento de formalismos ineficientes. Nosso papel é entregar soluções seguras e viáveis para proteger quem produz e quem confia em nós."
+                                </p>
+
+                                <!-- Badge OAB -->
+                                <div class="inline-flex items-center px-4 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-[11px] text-brand-ivory/80">
+                                    <svg class="w-4 h-4 text-brand-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v5m4-5v5m4-5v5M3 10h18M3 7l9-4 9 4M4 10h16v9a1 1 0 01-1 1H5a1 1 0 01-1-1v-9zM2 20h20"></path></svg>
+                                    OAB/PR 137768 • Atuação Estratégica
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Editorial -->
+                    <div class="lg:col-span-7">
+                        <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Institucional</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-6">
+                            Uma Advocacia Construída na Prática, na Estratégia e na Confiança
+                        </h2>
+                        
+                        <p class="text-brand-muted text-base leading-relaxed font-light mb-6">
+                            O escritório <strong class="text-brand-ivory font-medium">Thiago Rangel Advocacia & Consultoria</strong> nasceu com a missão clara de romper com a lentidão e o excesso de burocracias vazias do meio jurídico convencional. 
+                        </p>
+                        
+                        <p class="text-brand-muted text-base leading-relaxed font-light mb-8">
+                            Combinamos a visão de inteligência corporativa e tributária com uma atuação defensiva resolutiva para pessoas físicas. Seja estruturando a proteção patrimonial de um negócio ou garantindo uma liminar de saúde em caráter de urgência, nossa postura é pautada por técnica cirúrgica, discrição e comunicação transparente.
+                        </p>
+
+                        <!-- Pilares com hierarquia semântica H3 corrigida -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-brand-ivory">Sem Juridiquês</h3>
+                                    <p class="text-xs text-brand-muted mt-0.5 font-light">Comunicação clara com foco em soluções práticas e decisões conscientes.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-brand-ivory">Prontidão e Resposta</h3>
+                                    <p class="text-xs text-brand-muted mt-0.5 font-light">Atualizações periódicas do andamento do seu processo diretamente no WhatsApp.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-brand-ivory">Estrutura Híbrida</h3>
+                                    <p class="text-xs text-brand-muted mt-0.5 font-light">Ambiente físico privativo em Umuarama e operação 100% digital em todo o país.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                                <svg class="w-4 h-4 text-brand-gold mt-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+                                <div>
+                                    <h3 class="text-sm font-semibold text-brand-ivory">Segurança & Previsibilidade</h3>
+                                    <p class="text-xs text-brand-muted mt-0.5 font-light">Rigor técnico na avaliação de riscos antes de propor qualquer medida judicial.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 5. DIFERENCIAIS ================= -->
+        <section id="diferenciais" class="py-24 bg-brand-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Vantagens Concretas</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
+                        O Que Nos Torna o Parceiro Certo
+                    </h2>
+                    <p class="text-brand-muted text-sm sm:text-base font-light">
+                        Segurança para tomar decisões financeiras e patrimoniais com a convicção de estar amparado por uma defesa consistente.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                        <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors" aria-hidden="true">01</span>
+                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Estratégia e Alta Precisão</h3>
+                        <p class="text-sm text-brand-muted leading-relaxed font-light">
+                            Cada demanda é analisada sob uma perspectiva multidisciplinar, unindo visão contábil, proteção patrimonial e argumentação jurídica combativa.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                        <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors" aria-hidden="true">02</span>
+                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Velocidade e Prontidão</h3>
+                        <p class="text-sm text-brand-muted leading-relaxed font-light">
+                            Processos judiciais exigem respostas ágeis. Atuamos com canal prioritário para situações emergenciais de saúde, bloqueios indevidos e prazos fiscais.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                        <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors" aria-hidden="true">03</span>
+                        <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Mentalidade de Negócios</h3>
+                        <p class="text-sm text-brand-muted leading-relaxed font-light">
+                            Avaliamos riscos e impactos financeiros antes de qualquer litígio. Nosso objetivo central é defender seus interesses com a maior eficiência e o menor desgaste possível.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 6. FORMULÁRIO DE CONTATO & LOCALIZAÇÃO ================= -->
+        <section id="contato" class="py-24 bg-brand-card/30 border-t border-brand-border/30 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Inicie seu Atendimento</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
+                        Agende sua Consulta Jurídica
+                    </h2>
+                    <p class="text-brand-muted text-sm sm:text-base font-light">
+                        Preencha o formulário para ser direcionado ao WhatsApp com sua demanda pré-formatada ou utilize nossos canais oficiais.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    
+                    <!-- Formulário -->
+                    <div class="lg:col-span-7 bg-brand-card p-8 sm:p-10 rounded-2xl border border-brand-border shadow-2xl">
+                        <form id="contact-form" class="space-y-6">
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="client-name" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Seu Nome Completo *</label>
+                                    <input type="text" id="client-name" required placeholder="Ex: Roberto Silva" 
+                                           class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
+                                </div>
+                                <div>
+                                    <label for="client-phone" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">WhatsApp / Telefone *</label>
+                                    <input type="tel" id="client-phone" required placeholder="(44) 98441-0950" 
+                                           class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="service-area" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Qual assunto você deseja tratar? *</label>
+                                <select id="service-area" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold transition-colors">
+                                    <option value="" disabled selected>Selecione uma área...</option>
+                                    <option value="Direito Tributário / Fiscal">Direito Tributário / Recuperação & Defesas</option>
+                                    <option value="Proteção Patrimonial e Holdings">Proteção Patrimonial & Holding Familiar</option>
+                                    <option value="Direito da Saúde (Liminares)">Direito à Saúde (Liminar urgente remédio/cirurgia)</option>
+                                    <option value="Direito Bancário e Fraudes">Direito Bancário / Golpe do Pix / Juros</option>
+                                    <option value="Isenção de IRPF para Aposentados">Isenção de Imposto de Renda (Doença Grave)</option>
+                                    <option value="Contratos e Empresarial">Direito Empresarial / Contratos Corporativos</option>
+                                    <option value="Problemas com Voo / Consumidor">Problemas com Voo / Extravio de Bagagem</option>
+                                    <option value="Direito Digital e LGPD">Direito Digital & LGPD</option>
+                                    <option value="Outro Assunto">Outro Assunto Jurídico</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="client-message" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Resumo da sua situação (Opcional)</label>
+                                <textarea id="client-message" rows="3" placeholder="Descreva brevemente sua necessidade para um atendimento mais ágil..." 
+                                          class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/20 flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                Enviar Mensagem no WhatsApp
+                            </button>
+                            
+                            <p class="text-[11px] text-center text-brand-muted">
+                                Seus dados estão protegidos sob sigilo profissional nos termos da legislação vigente.
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Informações de Contato -->
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                        
+                        <div class="bg-brand-card p-8 rounded-2xl border border-brand-border">
+                            <h3 class="font-serif text-xl font-bold text-brand-ivory mb-6 pb-3 border-b border-brand-border/40">
+                                Informações de Contato
+                            </h3>
+                            
+                            <ul class="space-y-5 text-sm">
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs uppercase font-semibold text-brand-muted">Endereço da Sede</span>
+                                        <span class="text-brand-ivory font-medium">Av. Pres. Castelo Branco, 3806</span>
+                                        <span class="block text-xs text-brand-muted mt-0.5">Zona VI, Umuarama-PR, Sala 504-A</span>
+                                        <span class="block text-xs text-brand-muted mt-1">Atendimento presencial com agendamento prévio.</span>
+                                    </div>
+                                </li>
+
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs uppercase font-semibold text-brand-muted">WhatsApp Oficial</span>
+                                        <a href="https://wa.me/5544984410950" class="text-brand-ivory hover:text-brand-gold font-medium transition-colors">
+                                            (44) 98441-0950
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs uppercase font-semibold text-brand-muted">E-mail de Contato</span>
+                                        <a href="mailto:thiagorangel.advogado@gmail.com" class="text-brand-ivory font-medium hover:text-brand-gold transition-colors">thiagorangel.advogado@gmail.com</a>
+                                    </div>
+                                </li>
+
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </div>
+                                    <div>
+                                        <span class="block text-xs uppercase font-semibold text-brand-muted">Horário de Expediente</span>
+                                        <span class="text-brand-ivory font-medium">Segunda a Sexta: 09:00 às 18:00</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Card Social (Apenas Instagram com link ativo) -->
+                        <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex items-center justify-between">
+                            <div>
+                                <span class="block text-xs uppercase font-semibold text-brand-muted">Acompanhe no Instagram</span>
+                                <span class="text-sm font-semibold text-brand-ivory">@thiagorangel.advogado</span>
+                            </div>
+                            <div>
+                                <a href="https://instagram.com/thiagorangel.advogado" target="_blank" rel="noopener noreferrer" 
+                                   aria-label="Perfil oficial de Thiago Rangel no Instagram"
+                                   class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <!-- FIM DO CONTEÚDO PRINCIPAL -->
+
+    <!-- ================= 7. FOOTER ================= -->
     <footer class="bg-brand-black border-t border-brand-border/40 pt-16 pb-12 text-brand-muted text-xs">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-brand-border/30">
                 
-                <!-- Coluna 1: Logo Oficial no Rodapé -->
+                <!-- Coluna 1: Logo Oficial -->
                 <div class="md:col-span-5 space-y-4">
                     <div class="flex items-center">
                         <img src="logo.png" 
                              alt="Thiago Rangel Advocacia & Consultoria" 
-                             class="h-12 sm:h-14 w-auto max-w-[220px] sm:max-w-[260px] object-contain"
-                             onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='logo.png.png';}">
+                             width="260"
+                             height="56"
+                             loading="lazy"
+                             class="h-12 sm:h-14 w-auto max-w-[220px] sm:max-w-[260px] object-contain">
                     </div>
                     <p class="text-xs text-brand-muted leading-relaxed font-light max-w-sm mt-2">
                         Sociedade individual de advocacia sediada em Umuarama - PR. Prestação de serviços jurídicos estratégicos para empresas e pessoas físicas em todo o Brasil.
                     </p>
                 </div>
 
-                <!-- Coluna 2: Navegação Rápida -->
+                <!-- Coluna 2: Navegação -->
                 <div class="md:col-span-3 space-y-3">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Navegação</h4>
+                    <div class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Navegação</div>
                     <ul class="space-y-2">
                         <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Início</a></li>
                         <li><a href="#areas" class="hover:text-brand-gold transition-colors">Áreas de Atuação</a></li>
@@ -722,7 +764,7 @@
 
                 <!-- Coluna 3: Registro & Informações Legais -->
                 <div class="md:col-span-4 space-y-3">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Registro Profissional</h4>
+                    <div class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Registro Profissional</div>
                     <p class="text-sm text-brand-ivory font-medium">OAB/PR nº 137.768</p>
                     <p class="text-[11px] leading-relaxed text-brand-muted font-light">
                         Atendimento com sigilo profissional, discrição e planejamento jurídico customizado. Consultas presenciais sob agendamento em Umuarama-PR ou por videoconferência para clientes em todo o território nacional.
@@ -752,10 +794,10 @@
         <span class="absolute right-full mr-3 bg-brand-card text-brand-ivory text-xs px-3 py-1.5 rounded-lg border border-brand-gold/40 shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             Falar com Dr. Thiago
         </span>
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
-    <!-- ================= JAVASCRIPT DE INTERAÇÃO ================= -->
+    <!-- ================= JAVASCRIPT ================= -->
     <script>
         // 1. Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -763,16 +805,18 @@
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
         });
 
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // 2. Filtro de Áreas de Atuação (Empresas vs Indivíduos)
+        // 2. Filtro de Áreas de Atuação
         const filterBtns = document.querySelectorAll('.filter-btn');
         const areaCards = document.querySelectorAll('.area-card');
 
@@ -852,4 +896,3 @@
     </script>
 </body>
 </html>
-
