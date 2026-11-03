@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Rangel | Advocacia & Consultoria Estratégica</title>
+    <meta name="description" content="Advocacia corporativa e consultoria jurídica de alto padrão em Umuarama - PR e em todo o Brasil. Atuação especializada em Direito Tributário, Empresarial, Saúde e Bancário.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#121212',
+                            card: '#1B1B1B',
+                            surface: '#242424',
+                            gold: '#B99458',
+                            goldLight: '#D8B67D',
+                            goldDark: '#8F6F38',
+                            ivory: '#F5F2EC',
+                            titanium: '#5C5C5C',
+                            muted: '#9E9E9E',
+                            border: 'rgba(185, 148, 88, 0.22)'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #F5F2EC 10%, #D8B67D 55%, #B99458 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-pattern {
+            background-color: #121212;
+            background-image: radial-gradient(circle at 50% 10%, rgba(185, 148, 88, 0.12) 0%, transparent 60%),
+                              linear-gradient(to bottom, rgba(18, 18, 18, 0.75), #121212);
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 10px 30px -10px rgba(185, 148, 88, 0.18);
+            border-color: rgba(185, 148, 88, 0.55);
+            transform: translateY(-4px);
+        }
+
+        .glass-header {
+            background: rgba(18, 18, 18, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B99458;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-brand-ivory font-sans antialiased selection:bg-brand-gold selection:text-brand-black">
+
+    <!-- NOTIFICAÇÃO TOAST -->
+    <div id="toast" class="fixed top-24 right-5 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-brand-card border border-brand-gold text-brand-ivory px-5 py-4 rounded-xl shadow-2xl flex items-center space-x-3 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-brand-gold text-xl"></i>
+        <div id="toast-message" class="text-sm font-medium">Redirecionando para o WhatsApp...</div>
+    </div>
+
+    <!-- ================= 1. HEADER / NAVEGAÇÃO ================= -->
+    <header class="fixed top-0 left-0 w-full z-40 glass-header border-b border-brand-border/40 transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo Oficial Apontando para logo.png -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="logo.png" alt="Thiago Rangel Advocacia & Consultoria" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('logo-header-fallback').classList.remove('hidden'); document.getElementById('logo-header-fallback').classList.add('flex');">
+                
+                <!-- Fallback inteligente para pré-visualização quando o arquivo local ainda não estiver carregado -->
+                <div id="logo-header-fallback" class="hidden items-center space-x-3">
+                    <span class="text-3xl sm:text-4xl font-serif font-bold text-brand-gold tracking-tighter">TR</span>
+                    <div class="border-l border-brand-gold/30 pl-3">
+                        <div class="text-xs sm:text-sm font-serif tracking-widest text-brand-ivory font-bold">THIAGO RANGEL</div>
+                        <div class="text-[0.6rem] sm:text-[0.65rem] tracking-[0.2em] text-brand-gold uppercase">Advocacia & Consultoria</div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-ivory/80">
+                <a href="#inicio" class="hover:text-brand-gold transition-colors py-1">Início</a>
+                <a href="#areas" class="hover:text-brand-gold transition-colors py-1">Áreas de Atuação</a>
+                <a href="#sobre" class="hover:text-brand-gold transition-colors py-1">O Escritório</a>
+                <a href="#diferenciais" class="hover:text-brand-gold transition-colors py-1">Diferenciais</a>
+                <a href="#contato" class="hover:text-brand-gold transition-colors py-1">Contato</a>
+            </nav>
+
+            <!-- Botão de Ação CTA Header -->
+            <div class="hidden sm:flex items-center">
+                <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center px-4 py-2.5 rounded-lg text-xs font-semibold uppercase tracking-wider bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all duration-300 shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-sm mr-2"></i>
+                    Atendimento Direto
+                </a>
+            </div>
+
+            <!-- Botão Mobile Menu Hamburger -->
+            <button id="mobile-menu-btn" aria-label="Abrir Menu de Navegação" class="md:hidden text-brand-ivory hover:text-brand-gold focus:outline-none p-2">
+                <i class="fa-solid fa-bars-staggered text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-black/95 border-b border-brand-border px-4 pt-3 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Início</a>
+            <a href="#areas" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Áreas de Atuação</a>
+            <a href="#sobre" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">O Escritório</a>
+            <a href="#diferenciais" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Diferenciais</a>
+            <a href="#contato" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ivory/90 hover:bg-brand-card hover:text-brand-gold">Contato & Localização</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." target="_blank" rel="noopener noreferrer" 
+                   class="w-full flex items-center justify-center px-4 py-3 rounded-lg text-sm font-semibold bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-colors">
+                    <i class="fa-brands fa-whatsapp text-base mr-2"></i> Falar com o Advogado
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= 2. HERO SECTION (DOBRA PRINCIPAL) ================= -->
+    <section id="inicio" class="hero-pattern pt-32 sm:pt-40 pb-20 sm:pb-32 relative overflow-hidden border-b border-brand-border/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            
+            <!-- Badge Superior -->
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-gold/40 text-[11px] sm:text-xs text-brand-goldLight tracking-wider uppercase mb-8 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
+                <span>Advocacia de Alta Performance • Sede em Umuarama-PR</span>
+            </div>
+
+            <!-- Título Principal Exato -->
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-brand-ivory max-w-4xl mx-auto leading-tight sm:leading-tight mb-6">
+                Soluções Jurídicas Estratégicas para <span class="gold-gradient-text">Você</span>
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="text-brand-muted text-base sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10 font-light">
+                Advocacia combativa, ágil e de alta precisão técnica. Protegemos seus direitos e o seu patrimônio com discrição, prontidão e foco absoluto em resultados.
+            </p>
+
+            <!-- Chamadas para Ação (CTAs) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 max-w-md mx-auto">
+                <a href="https://wa.me/5544984410950" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 transform hover:-translate-y-0.5 shadow-xl shadow-brand-gold/15 flex items-center justify-center">
+                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>
+                    Fale Conosco
+                </a>
+                <a href="#areas" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-semibold tracking-wider text-brand-ivory border border-brand-border bg-brand-card/60 hover:bg-brand-surface hover:border-brand-gold/50 transition-all duration-300 flex items-center justify-center">
+                    Conhecer Áreas
+                    <i class="fa-solid fa-arrow-down-long ml-2 text-xs text-brand-gold"></i>
+                </a>
+            </div>
+
+            <!-- Badges de Autoridade (Sem menção a 100% atendimento por sócio ou provimento OAB) -->
+            <div class="mt-16 pt-10 border-t border-brand-border/30 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center max-w-4xl mx-auto">
+                <div class="p-2">
+                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Alta Precisão</div>
+                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Estratégia Customizada</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Agilidade</div>
+                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Plantão de Liminares</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Nacional</div>
+                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Processos 100% Digitais</div>
+                </div>
+                <div class="p-2">
+                    <div class="text-xl sm:text-2xl font-bold font-serif text-brand-goldLight">Segurança</div>
+                    <div class="text-xs text-brand-muted mt-1 uppercase tracking-wider">Gestão de Riscos</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 3. ÁREAS DE ATUAÇÃO (SISTEMA DE ABAS PJ vs PF) ================= -->
+    <section id="areas" class="py-24 bg-brand-black relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Portfólio Jurídico</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
+                    Atuação Estruturada e Focada no seu Objetivo
+                </h2>
+                <p class="text-brand-muted text-sm sm:text-base font-light">
+                    Soluções sob medida para o ambiente corporativo e pronta resposta para a defesa dos direitos individuais e patrimoniais da sua família.
+                </p>
+
+                <!-- Botões de Alternância das Abas -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-8">
+                    <button class="filter-btn active px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-gold text-brand-black" data-filter="all">
+                        Todas as Áreas
+                    </button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="empresas">
+                        <i class="fa-solid fa-briefcase text-brand-gold mr-1.5"></i> Para Empresas (PJ)
+                    </button>
+                    <button class="filter-btn px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all bg-brand-card text-brand-ivory/80 border border-brand-border hover:border-brand-gold" data-filter="individuos">
+                        <i class="fa-solid fa-user-shield text-brand-gold mr-1.5"></i> Para Você (PF)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid de Cards de Atuação -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="areas-grid">
+                
+                <!-- Card 1: Tributário & Patrimonial (PJ) -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-scale-balanced text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporate</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Direito Tributário
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Recuperação de créditos tributários indevidos, planejamento tributário preventivo, defesas fiscais administrativas e judiciais federais, estaduais e municipais.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20consultoria%20sobre%20Direito%20Tribut%C3%A1rio." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Proteção Patrimonial & Holdings (PJ) -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-vault text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Patrimonial</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Proteção Patrimonial & Holdings
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Estruturação jurídica de holdings familiares e empresariais, blindagem legítima de bens de sócios contra riscos operacionais e planejamento sucessório inteligente.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tenho%20interesse%20em%20Prote%C3%A7%C3%A3o%20Patrimonial%20e%20Holdings." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3: Direito da Saúde & Liminares (PF) - Padrão idêntico aos outros cards -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-notes-medical text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Plantão de Urgência</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Direito à Saúde & Liminares
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Medidas com pedido de tutela de urgência (liminar) para fornecimento de medicamentos de alto custo, autorização de cirurgias, internações e home care negados por planos de saúde.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Preciso%20de%20ajuda%20urgente%20com%20Negativa%20de%20Plano%20de%20Sa%C3%BAde." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 4: Direito Bancário e Fraudes (PF) - Sem menção a leilão irregular ou busca e apreensão -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-building-columns text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Defesa Financeira</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Bancário & Fraudes Digitais
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Recuperação de valores perdidos em golpes do Pix e fraudes financeiras, proteção patrimonial e combate a cobranças indevidas e juros contratuais abusivos.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20consultoria%20sobre%20problemas%20com%20Banco%20ou%20Golpe%20Financeiro." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 5: Contratos & Societário (PJ) -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-file-signature text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Corporativo</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Contratos & Assessoria Empresarial
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Elaboração e revisão minuciosa de contratos comerciais complexos, assessoria jurídica preventiva continuada e gestão técnica de passivos corporativos.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Quero%20conhecer%20a%20assessoria%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 6: Defesa do Consumidor e Aéreo (PF) -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-plane-slash text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Consumidor</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Direito Aéreo & Consumidor
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Indenizações por cancelamentos ou atrasos graves de voos nacionais e internacionais, extravio ou dano de bagagens, overbooking e práticas comerciais lesivas.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Tive%20problemas%20com%20voo%20ou%20bagagem%20e%20quero%20indeniza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 7: Isenção de IRPF para Aposentados (PF VIP) -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="individuos">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-receipt text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Tributário / PF</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Isenção de IRPF (Doença Grave)
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Concessão de isenção total do Imposto de Renda sobre proventos de aposentadoria e pensão para portadores de doenças graves, com restituição retroativa dos últimos 5 anos.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20analisar%20meu%20direito%20%C3%A0%20Isen%C3%A7%C3%A3o%20de%20Imposto%20de%20Renda." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Card 8: Direito Digital & Compliance (PJ) -->
+                <div class="area-card group bg-brand-card p-6 rounded-2xl border border-brand-border transition-all duration-300 card-glow flex flex-col justify-between" data-category="empresas">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-brand-gold/30 flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-brand-black transition-colors">
+                            <i class="fa-solid fa-fingerprint text-xl"></i>
+                        </div>
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded inline-block mb-2">Inovação</span>
+                        <h3 class="font-serif text-lg font-bold text-brand-ivory mb-2 group-hover:text-brand-goldLight transition-colors">
+                            Direito Digital & LGPD
+                        </h3>
+                        <p class="text-xs text-brand-muted leading-relaxed font-light mb-4">
+                            Adequação corporativa à LGPD, remoção célere de conteúdos ilícitos e difamatórios na internet, recuperação judicial de perfis e defesa contra vazamento de dados.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20ajuda%20com%20Direito%20Digital%20e%20LGPD." target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center text-xs font-semibold text-brand-gold hover:text-brand-goldLight pt-4 border-t border-brand-border/40">
+                        Consultar Especialista <i class="fa-solid fa-chevron-right ml-1.5 text-[10px]"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 4. SOBRE O ESCRITÓRIO ================= -->
+    <section id="sobre" class="py-24 bg-brand-card/40 border-y border-brand-border/30 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna Visual / Cartão com Foto em Moldura Circular Dourada -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-sm lg:max-w-none">
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-gold to-brand-goldDark rounded-2xl blur opacity-30"></div>
+                        <div class="relative bg-brand-card p-8 rounded-2xl border border-brand-gold/40 shadow-2xl flex flex-col items-center text-center">
+                            
+                            <!-- Círculo Central com Borda Dourada apontando para foto.jpg -->
+                            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full border-2 border-brand-gold p-1 mb-6 relative overflow-hidden shadow-2xl bg-brand-surface flex items-center justify-center">
+                                <img src="foto.jpg" alt="Dr. Thiago Rangel" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('foto-circle-fallback').classList.remove('hidden'); document.getElementById('foto-circle-fallback').classList.add('flex');">
+                                
+                                <!-- Fallback exibido se foto.jpg não for encontrada localmente no preview -->
+                                <div id="foto-circle-fallback" class="hidden flex-col items-center justify-center text-brand-gold">
+                                    <span class="text-4xl font-serif font-bold tracking-tight">TR</span>
+                                    <span class="text-[9px] tracking-widest uppercase text-brand-muted mt-1">Dr. Thiago</span>
+                                </div>
+                            </div>
+
+                            <h3 class="font-serif text-2xl font-bold text-brand-ivory mb-1">Dr. Thiago Rangel</h3>
+                            <p class="text-xs font-semibold uppercase tracking-widest text-brand-gold mb-4">Advogado Fundador</p>
+                            
+                            <div class="w-16 h-0.5 bg-brand-border mb-5"></div>
+                            
+                            <p class="text-xs text-brand-muted leading-relaxed font-light mb-6">
+                                "A advocacia moderna exige postura estratégica e desprendimento de formalismos ineficientes. Nosso papel é entregar soluções seguras e viáveis para proteger quem produz e quem confia em nós."
+                            </p>
+
+                            <!-- Badge OAB -->
+                            <div class="inline-flex items-center px-4 py-1.5 rounded-lg bg-brand-surface border border-brand-border text-[11px] text-brand-ivory/80">
+                                <i class="fa-solid fa-landmark text-brand-gold mr-2"></i>
+                                OAB/PR 137768 • Atuação Estratégica
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Editorial -->
+                <div class="lg:col-span-7">
+                    <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Institucional</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-6">
+                        Uma Advocacia Construída na Prática, na Estratégia e na Confiança
+                    </h2>
+                    
+                    <p class="text-brand-muted text-base leading-relaxed font-light mb-6">
+                        O escritório <strong class="text-brand-ivory font-medium">Thiago Rangel Advocacia & Consultoria</strong> nasceu com a missão clara de romper com a lentidão e o excesso de burocracias vazias do meio jurídico convencional. 
+                    </p>
+                    
+                    <p class="text-brand-muted text-base leading-relaxed font-light mb-8">
+                        Combinamos a visão de inteligência corporativa e tributária com uma atuação defensiva resolutiva para pessoas físicas. Seja estruturando a proteção patrimonial de um negócio ou garantindo uma liminar de saúde em caráter de urgência, nossa postura é pautada por técnica cirúrgica, discrição e comunicação transparente.
+                    </p>
+
+                    <!-- Lista de Pilares do Escritório -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Sem Juridiquês</h4>
+                                <p class="text-xs text-brand-muted mt-0.5 font-light">Comunicação clara com foco em soluções práticas e decisões conscientes.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Prontidão e Resposta</h4>
+                                <p class="text-xs text-brand-muted mt-0.5 font-light">Atualizações periódicas do andamento do seu processo diretamente no WhatsApp.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Estrutura Híbrida</h4>
+                                <p class="text-xs text-brand-muted mt-0.5 font-light">Ambiente físico privativo em Umuarama e operação 100% digital em todo o país.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-brand-card border border-brand-border/40">
+                            <i class="fa-solid fa-check text-brand-gold mt-1"></i>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Segurança & Previsibilidade</h4>
+                                <p class="text-xs text-brand-muted mt-0.5 font-light">Rigor técnico na avaliação de riscos antes de propor qualquer medida judicial.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 5. DIFERENCIAIS ================= -->
+    <section id="diferenciais" class="py-24 bg-brand-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Vantagens Concretas</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
+                    O Que Nos Torna o Parceiro Certo
+                </h2>
+                <p class="text-brand-muted text-sm sm:text-base font-light">
+                    Segurança para tomar decisões financeiras e patrimoniais com a convicção de estar amparado por uma defesa consistente.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Diferencial 1: Estratégia e Alta Precisão -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">01</span>
+                    <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-chess-knight"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Estratégia e Alta Precisão</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed font-light">
+                        Cada demanda é analisada sob uma perspectiva multidisciplinar, unindo visão contábil, proteção patrimonial e argumentação jurídica combativa.
+                    </p>
+                </div>
+
+                <!-- Diferencial 2: Velocidade e Prontidão -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">02</span>
+                    <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Velocidade e Prontidão</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed font-light">
+                        Processos judiciais exigem respostas ágeis. Atuamos com canal prioritário para situações emergenciais de saúde, bloqueios indevidos e prazos fiscais.
+                    </p>
+                </div>
+
+                <!-- Diferencial 3: Mentalidade de Negócios -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-border relative overflow-hidden group hover:border-brand-gold transition-all duration-300">
+                    <span class="text-6xl font-serif font-bold text-brand-surface/70 absolute -top-2 -right-2 select-none group-hover:text-brand-gold/10 transition-colors">03</span>
+                    <div class="w-12 h-12 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold text-xl mb-6">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-ivory mb-3">Mentalidade de Negócios</h3>
+                    <p class="text-sm text-brand-muted leading-relaxed font-light">
+                        Avaliamos riscos e impactos financeiros antes de qualquer litígio. Nosso objetivo central é defender seus interesses com a maior eficiência e o menor desgaste possível.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= 6. FORMULÁRIO DE CONTATO & LOCALIZAÇÃO ================= -->
+    <section id="contato" class="py-24 bg-brand-card/30 border-t border-brand-border/30 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-[0.25em] text-brand-gold font-semibold">Inicie seu Atendimento</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-ivory mt-2 mb-4">
+                    Agende sua Consulta Jurídica
+                </h2>
+                <p class="text-brand-muted text-sm sm:text-base font-light">
+                    Preencha o formulário para ser direcionado ao WhatsApp com sua demanda pré-formatada ou utilize nossos canais oficiais.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Formulário com redirecionamento dinâmico para WhatsApp -->
+                <div class="lg:col-span-7 bg-brand-card p-8 sm:p-10 rounded-2xl border border-brand-border shadow-2xl">
+                    <form id="contact-form" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="client-name" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Seu Nome Completo *</label>
+                                <input type="text" id="client-name" required placeholder="Ex: Roberto Silva" 
+                                       class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
+                            </div>
+                            <div>
+                                <label for="client-phone" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">WhatsApp / Telefone *</label>
+                                <input type="tel" id="client-phone" required placeholder="(44) 98441-0950" 
+                                       class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="service-area" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Qual assunto você deseja tratar? *</label>
+                            <select id="service-area" required class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3.5 text-sm text-brand-ivory focus:outline-none focus:border-brand-gold transition-colors">
+                                <option value="" disabled selected>Selecione uma área...</option>
+                                <option value="Direito Tributário / Fiscal">Direito Tributário / Recuperação & Defesas</option>
+                                <option value="Proteção Patrimonial e Holdings">Proteção Patrimonial & Holding Familiar</option>
+                                <option value="Direito da Saúde (Liminares)">Direito à Saúde (Liminar urgente remédio/cirurgia)</option>
+                                <option value="Direito Bancário e Fraudes">Direito Bancário / Golpe do Pix / Juros</option>
+                                <option value="Isenção de IRPF para Aposentados">Isenção de Imposto de Renda (Doença Grave)</option>
+                                <option value="Contratos e Empresarial">Direito Empresarial / Contratos Corporativos</option>
+                                <option value="Problemas com Voo / Consumidor">Problemas com Voo / Extravio de Bagagem</option>
+                                <option value="Direito Digital e LGPD">Direito Digital & LGPD</option>
+                                <option value="Outro Assunto">Outro Assunto Jurídico</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="client-message" class="block text-xs uppercase font-semibold tracking-wider text-brand-ivory/80 mb-2">Resumo da sua situação (Opcional)</label>
+                            <textarea id="client-message" rows="3" placeholder="Descreva brevemente sua necessidade para um atendimento mais ágil..." 
+                                      class="w-full bg-brand-surface border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-ivory placeholder-brand-muted/50 focus:outline-none focus:border-brand-gold transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-brand-gold text-brand-black hover:bg-brand-goldLight transition-all duration-300 shadow-xl shadow-brand-gold/20 flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+                            Enviar Mensagem no WhatsApp
+                        </button>
+                        
+                        <p class="text-[11px] text-center text-brand-muted">
+                            Seus dados estão protegidos sob sigilo profissional nos termos da legislação vigente.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Detalhes de Endereço e Atendimento -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                    
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-border">
+                        <h3 class="font-serif text-xl font-bold text-brand-ivory mb-6 pb-3 border-b border-brand-border/40">
+                            Informações de Contato
+                        </h3>
+                        
+                        <ul class="space-y-5 text-sm">
+                            <li class="flex items-start space-x-3">
+                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase font-semibold text-brand-muted">Endereço da Sede</span>
+                                    <span class="text-brand-ivory font-medium">Av. Pres. Castelo Branco, 3806</span>
+                                    <span class="block text-xs text-brand-muted mt-0.5">Zona VI, Umuarama-PR, Sala 504-A</span>
+                                    <span class="block text-xs text-brand-muted mt-1">Atendimento presencial com agendamento prévio.</span>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start space-x-3">
+                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase font-semibold text-brand-muted">WhatsApp Oficial</span>
+                                    <a href="https://wa.me/5544984410950" class="text-brand-ivory hover:text-brand-gold font-medium transition-colors">
+                                        (44) 98441-0950
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start space-x-3">
+                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase font-semibold text-brand-muted">E-mail de Contato</span>
+                                    <a href="mailto:thiagorangel.advogado@gmail.com" class="text-brand-ivory font-medium hover:text-brand-gold transition-colors">thiagorangel.advogado@gmail.com</a>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start space-x-3">
+                                <div class="w-9 h-9 rounded-lg bg-brand-surface flex items-center justify-center text-brand-gold shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase font-semibold text-brand-muted">Horário de Expediente</span>
+                                    <span class="text-brand-ivory font-medium">Segunda a Sexta: 09:00 às 18:00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Social / Redes -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex items-center justify-between">
+                        <div>
+                            <span class="block text-xs uppercase font-semibold text-brand-muted">Acompanhe nas Redes</span>
+                            <span class="text-sm font-semibold text-brand-ivory">@thiagorangel.advogado</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="https://instagram.com/thiagorangel.advogado" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors" title="Instagram">
+                                <i class="fa-brands fa-instagram text-base"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in text-base"></i>
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-brand-surface border border-brand-border flex items-center justify-center text-brand-ivory hover:text-brand-gold hover:border-brand-gold transition-colors" title="TikTok">
+                                <i class="fa-brands fa-tiktok text-base"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= 7. FOOTER COMPLETO ================= -->
+    <footer class="bg-brand-black border-t border-brand-border/40 pt-16 pb-12 text-brand-muted text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-brand-border/30">
+                
+                <!-- Coluna 1: Logo apontando para logo.png -->
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="logo.png" alt="Thiago Rangel Advocacia & Consultoria" class="h-12 w-auto object-contain" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('logo-footer-fallback').classList.remove('hidden'); document.getElementById('logo-footer-fallback').classList.add('flex');">
+                        
+                        <!-- Fallback para o rodapé -->
+                        <div id="logo-footer-fallback" class="hidden items-center space-x-3">
+                            <span class="text-3xl font-serif font-bold text-brand-gold tracking-tighter">TR</span>
+                            <div class="border-l border-brand-gold/30 pl-3">
+                                <div class="text-sm font-serif tracking-widest text-brand-ivory font-bold">THIAGO RANGEL</div>
+                                <div class="text-[0.65rem] tracking-[0.2em] text-brand-gold uppercase">Advocacia & Consultoria</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-brand-muted leading-relaxed font-light max-w-sm mt-2">
+                        Sociedade individual de advocacia sediada em Umuarama - PR. Prestação de serviços jurídicos estratégicos para empresas e pessoas físicas em todo o Brasil.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Navegação Rápida -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Início</a></li>
+                        <li><a href="#areas" class="hover:text-brand-gold transition-colors">Áreas de Atuação</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Dr. Thiago Rangel</a></li>
+                        <li><a href="#diferenciais" class="hover:text-brand-gold transition-colors">Diferenciais</a></li>
+                        <li><a href="#contato" class="hover:text-brand-gold transition-colors">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Registro & Informações Legais -->
+                <div class="md:col-span-4 space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-brand-ivory">Registro Profissional</h4>
+                    <p class="text-sm text-brand-ivory font-medium">OAB/PR nº 137.768</p>
+                    <p class="text-[11px] leading-relaxed text-brand-muted font-light">
+                        Atendimento com sigilo profissional, discrição e planejamento jurídico customizado. Consultas presenciais sob agendamento em Umuarama-PR ou por videoconferência para clientes em todo o território nacional.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Copyright e Direitos -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] space-y-4 sm:space-y-0">
+                <p>&copy; 2026 Thiago Rangel Advocacia & Consultoria. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-brand-gold transition-colors">Termos de Uso</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">Conformidade LGPD</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ================= BOTÃO FLUTUANTE WHATSAPP ================= -->
+    <a href="https://wa.me/5544984410950?text=Ol%C3%A1,%20Dr.%20Thiago.%20Gostaria%20de%20um%20atendimento%20jur%C3%ADdico." 
+       target="_blank" rel="noopener noreferrer" 
+       aria-label="Falar com Dr. Thiago Rangel no WhatsApp"
+       class="fixed bottom-6 right-6 z-40 bg-brand-gold text-brand-black p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-brand-goldLight transition-all duration-300 flex items-center justify-center group">
+        <span class="absolute right-full mr-3 bg-brand-card text-brand-ivory text-xs px-3 py-1.5 rounded-lg border border-brand-gold/40 shadow-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Falar com Dr. Thiago
+        </span>
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- ================= JAVASCRIPT DE INTERAÇÃO ================= -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Filtro de Áreas de Atuação (Empresas vs Indivíduos)
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const areaCards = document.querySelectorAll('.area-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-gold', 'text-brand-black');
+                    b.classList.add('bg-brand-card', 'text-brand-ivory/80');
+                });
+                btn.classList.add('bg-brand-gold', 'text-brand-black');
+                btn.classList.remove('bg-brand-card', 'text-brand-ivory/80');
+
+                const filter = btn.getAttribute('data-filter');
+
+                areaCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 3. Redirecionamento Dinâmico do Formulário para WhatsApp
+        const contactForm = document.getElementById('contact-form');
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toast-message');
+
+        function showToast(msg) {
+            toastMessage.textContent = msg;
+            toast.classList.remove('translate-x-full');
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+            }, 3500);
+        }
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('client-name').value.trim();
+            const phone = document.getElementById('client-phone').value.trim();
+            const service = document.getElementById('service-area').value;
+            const message = document.getElementById('client-message').value.trim();
+
+            if (!name || !phone || !service) {
+                showToast("Por favor, preencha os campos obrigatórios.");
+                return;
+            }
+
+            let text = `Olá, Dr. Thiago Rangel! Meu nome é *${name}* (${phone}).\n`;
+            text += `Gostaria de agendar uma consulta sobre *${service}*.\n`;
+            if (message) {
+                text += `Detalhes da situação: ${message}\n`;
+            }
+            text += `Aguardando seu retorno. Obrigado!`;
+
+            const encodedText = encodeURIComponent(text);
+            const whatsappNumber = "5544984410950";
+
+            showToast("Abrindo WhatsApp com sua demanda...");
+
+            setTimeout(() => {
+                window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
+            }, 700);
+        });
+
+        // 4. Efeito de Sombra e Redução no Header ao Rolar a Página
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 40) {
+                header.classList.add('py-1', 'shadow-2xl');
+            } else {
+                header.classList.remove('py-1', 'shadow-2xl');
+            }
+        });
+    </script>
+</body>
+</html>
